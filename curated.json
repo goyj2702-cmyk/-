@@ -1,0 +1,1294 @@
+{
+  "_comment": "사람이 직접 검증해 관리하는 데이터. 크롤러 결과(scraped)와 병합되어 public/data.json이 됩니다.",
+  "items": [
+    {
+      "source": "curated",
+      "id": "t580e",
+      "cat": "어학",
+      "kind": "exam",
+      "essential": true,
+      "title": "토익 제580회 정기시험",
+      "host": "한국TOEIC위원회",
+      "start": "2026-10-11",
+      "end": "2026-10-11",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "오전 9:20 입실 마감"
+    },
+    {
+      "source": "curated",
+      "id": "t581a",
+      "cat": "어학",
+      "kind": "apply",
+      "essential": true,
+      "title": "토익 제581회 정기접수",
+      "host": "한국TOEIC위원회",
+      "start": "2026-09-14",
+      "end": "2026-10-19",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "마감일 오전 10시 마감 · 이후 특별추가접수(응시료 할증)"
+    },
+    {
+      "source": "curated",
+      "id": "t581e",
+      "cat": "어학",
+      "kind": "exam",
+      "essential": true,
+      "title": "토익 제581회 정기시험",
+      "host": "한국TOEIC위원회",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "오전 9:20 입실 마감"
+    },
+    {
+      "source": "curated",
+      "id": "t582a",
+      "cat": "어학",
+      "kind": "apply",
+      "essential": true,
+      "title": "토익 제582회 정기접수",
+      "host": "한국TOEIC위원회",
+      "start": "2026-09-28",
+      "end": "2026-11-02",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "마감일 오전 10시 마감 · 이후 특별추가접수(응시료 할증)"
+    },
+    {
+      "source": "curated",
+      "id": "t582e",
+      "cat": "어학",
+      "kind": "exam",
+      "essential": true,
+      "title": "토익 제582회 정기시험",
+      "host": "한국TOEIC위원회",
+      "start": "2026-11-15",
+      "end": "2026-11-15",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "오전 9:20 입실 마감"
+    },
+    {
+      "source": "curated",
+      "id": "t583a",
+      "cat": "어학",
+      "kind": "apply",
+      "essential": true,
+      "title": "토익 제583회 정기접수",
+      "host": "한국TOEIC위원회",
+      "start": "2026-10-12",
+      "end": "2026-11-16",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "마감일 오전 10시 마감 · 이후 특별추가접수(응시료 할증)"
+    },
+    {
+      "source": "curated",
+      "id": "t583e",
+      "cat": "어학",
+      "kind": "exam",
+      "essential": true,
+      "title": "토익 제583회 정기시험",
+      "host": "한국TOEIC위원회",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "오전 9:20 입실 마감"
+    },
+    {
+      "source": "curated",
+      "id": "t584a",
+      "cat": "어학",
+      "kind": "apply",
+      "essential": true,
+      "title": "토익 제584회 정기접수",
+      "host": "한국TOEIC위원회",
+      "start": "2026-10-26",
+      "end": "2026-11-30",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "마감일 오전 10시 마감 · 이후 특별추가접수(응시료 할증)"
+    },
+    {
+      "source": "curated",
+      "id": "t584e",
+      "cat": "어학",
+      "kind": "exam",
+      "essential": true,
+      "title": "토익 제584회 정기시험",
+      "host": "한국TOEIC위원회",
+      "start": "2026-12-13",
+      "end": "2026-12-13",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "오전 9:20 입실 마감"
+    },
+    {
+      "source": "curated",
+      "id": "t585a",
+      "cat": "어학",
+      "kind": "apply",
+      "essential": true,
+      "title": "토익 제585회 정기접수",
+      "host": "한국TOEIC위원회",
+      "start": "2026-11-09",
+      "end": "2026-12-14",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "마감일 오전 10시 마감 · 이후 특별추가접수(응시료 할증)"
+    },
+    {
+      "source": "curated",
+      "id": "t585e",
+      "cat": "어학",
+      "kind": "exam",
+      "essential": true,
+      "title": "토익 제585회 정기시험",
+      "host": "한국TOEIC위원회",
+      "start": "2026-12-27",
+      "end": "2026-12-27",
+      "url": "https://exam.toeic.co.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "오전 9:20 입실 마감"
+    },
+    {
+      "source": "curated",
+      "id": "q3a",
+      "cat": "자격증",
+      "kind": "apply",
+      "isBio": true,
+      "title": "정기 기사·산업기사 3회 실기 원서접수",
+      "host": "한국산업인력공단",
+      "start": "2026-09-21",
+      "end": "2026-09-28",
+      "url": "https://www.q-net.or.kr/crf021.do?id=crf02101",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp",
+        "rnd"
+      ],
+      "note": "바이오화학제품제조기사·화공기사 등"
+    },
+    {
+      "source": "curated",
+      "id": "q3e",
+      "cat": "자격증",
+      "kind": "exam",
+      "isBio": true,
+      "title": "정기 기사·산업기사 3회 실기시험",
+      "host": "한국산업인력공단",
+      "start": "2026-10-24",
+      "end": "2026-11-13",
+      "url": "https://www.q-net.or.kr/crf021.do?id=crf02101",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp",
+        "rnd"
+      ],
+      "note": "2026년 마지막 정기 기사 실기"
+    },
+    {
+      "source": "curated",
+      "id": "q3r",
+      "cat": "자격증",
+      "kind": "announce",
+      "isBio": true,
+      "title": "정기 기사·산업기사 3회 최종 합격발표",
+      "host": "한국산업인력공단",
+      "start": "2026-12-18",
+      "end": "2026-12-18",
+      "url": "https://www.q-net.or.kr/crf021.do?id=crf02101",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp",
+        "rnd"
+      ],
+      "note": "발표일 오전 9시"
+    },
+    {
+      "source": "curated",
+      "id": "b1",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": true,
+      "title": "2026 바이오미래포럼 대학생 서포터즈",
+      "host": "바이오미래포럼 사무국",
+      "start": "2026-09-16",
+      "end": "2026-10-11",
+      "url": "https://www.bics.re.kr/bForum",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년"
+      ],
+      "tags": [
+        "sales",
+        "rnd"
+      ],
+      "note": "주최 공식 사이트 접속 확인이 안 돼요. 지원 전 원문 공고를 다시 확인하세요."
+    },
+    {
+      "source": "curated",
+      "id": "b2",
+      "cat": "공모전",
+      "kind": "announce",
+      "isBio": true,
+      "title": "제4회 AI 신약개발 경진대회 최종 결과 발표",
+      "host": "보건복지부 · 한국보건산업진흥원 · 한국제약바이오협회",
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "url": "https://linkareer.com/activity/331676",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "rnd"
+      ],
+      "note": "링커리어 공고 원문"
+    },
+    {
+      "source": "curated",
+      "id": "b3",
+      "cat": "공모전",
+      "kind": "announce",
+      "isBio": true,
+      "title": "연구 아이디어 기술사업화 챌린지 데모데이",
+      "host": "보건복지부 · 한국보건산업진흥원",
+      "start": "2026-12-02",
+      "end": "2026-12-02",
+      "url": "https://biochallenge.co.kr",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "venture"
+      ],
+      "note": "본선 진출팀 최종 발표"
+    },
+    {
+      "source": "curated",
+      "id": "b4",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": true,
+      "title": "제4회 AI 신약개발 경진대회 예선",
+      "host": "보건복지부 · 한국제약바이오협회 외",
+      "start": "2026-06-28",
+      "end": "2026-08-07",
+      "url": "https://linkareer.com/activity/331676",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "rnd"
+      ],
+      "note": "대상 1,000만원"
+    },
+    {
+      "source": "curated",
+      "id": "b5",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": true,
+      "title": "2026 연구 아이디어 기술사업화 챌린지",
+      "host": "보건복지부 · 한국보건산업진흥원",
+      "start": "2026-06-15",
+      "end": "2026-08-05",
+      "url": "https://biochallenge.co.kr",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "venture",
+        "rnd"
+      ],
+      "note": "총 4.2억 시상 · 의학전공자 포함 팀"
+    },
+    {
+      "source": "curated",
+      "id": "b6",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": true,
+      "title": "바이오빅데이터 서포터즈 BIKO HERO 2기",
+      "host": "한국보건산업진흥원",
+      "start": "2026-07-22",
+      "end": "2026-08-12",
+      "url": "https://www.biobigdata.kr",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "팀별 활동비 · 우수팀 장관상"
+    },
+    {
+      "source": "curated",
+      "id": "b7",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": true,
+      "title": "한국생물공학회 캡스톤디자인 경진대회 BB Jump",
+      "host": "한국생물공학회",
+      "start": "2026-08-12",
+      "end": "2026-09-14",
+      "url": "https://www.ksbb.or.kr/board/list.html?code=notice&num=5050",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년"
+      ],
+      "tags": [
+        "rnd"
+      ],
+      "note": "학부생 3인 이상 팀"
+    },
+    {
+      "source": "curated",
+      "id": "b8",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": true,
+      "title": "글로벌 바이오 콘퍼런스(GBC) 서포터즈",
+      "host": "식품의약품안전처 · 한국바이오의약품협회",
+      "start": "2026-05-26",
+      "end": "2026-06-21",
+      "url": "https://gbckorea.kr",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales",
+        "gmp"
+      ],
+      "note": "제조소 견학·멘토링"
+    },
+    {
+      "source": "curated",
+      "id": "e1",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": true,
+      "title": "바이오제약 취업준비형 교육과정 (제조공정·품질관리)",
+      "host": "POSTECH",
+      "start": "2026-06-29",
+      "end": "2026-07-16",
+      "url": "https://popens.postech.ac.kr/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp"
+      ],
+      "note": "GMP 수준 현장실습 · 만 34세 이하 미취업 청년"
+    },
+    {
+      "source": "curated",
+      "id": "e2",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": true,
+      "title": "2026 K-NIBRT 바이오헬스 아카데미 (Bio-All) 3기",
+      "host": "연세대학교 국제캠퍼스 K-NIBRT사업단",
+      "start": "2026-07-12",
+      "end": "2026-07-12",
+      "url": "https://www.yonsei.ac.kr/bbs/sc/58/943563/artclView.do",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp",
+        "rnd"
+      ],
+      "note": "바이오의약품 생산공정 실습 교육 · 7월 12일 모집 마감, 다음 기수 공고 대기"
+    },
+    {
+      "source": "curated",
+      "id": "e3",
+      "cat": "교육",
+      "kind": "apply",
+      "always": true,
+      "isBio": true,
+      "title": "제약바이오 GMP·밸리데이션 교육과정",
+      "host": "한국제약바이오협회 교육센터",
+      "start": "",
+      "end": "",
+      "url": "https://edu.kpbma.or.kr",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp"
+      ],
+      "note": "GMP 입문·QA·QC·Data Integrity·밸리데이션 등 · 과정별 일정은 교육센터에서 확인"
+    },
+    {
+      "source": "curated",
+      "id": "e4",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "AI 기반 언리얼&블렌더 시네마틱 제작과정 2기",
+      "host": "(주)문화방송",
+      "start": "2026-10-08",
+      "end": "2026-10-26",
+      "url": "https://thinkyou.co.kr/extAct/67315/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "영상·3D 콘텐츠 실무 교육"
+    },
+    {
+      "source": "curated",
+      "id": "e5",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "아트너스클럽 시즌7 심화교육",
+      "host": "한국문화예술위원회",
+      "start": "2026-10-06",
+      "end": "2026-11-17",
+      "url": "https://thinkyou.co.kr/extAct/67317/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "문화예술 기획 심화 교육"
+    },
+    {
+      "source": "curated",
+      "id": "g1",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 PBS 숏폼 영상 콘텐츠 공모전",
+      "host": "국립부경대학교 방송국",
+      "start": "2026-09-23",
+      "end": "2026-11-13",
+      "url": "https://press.pknu.ac.kr/news/articleView.html?idxno=1326",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "교내 방송국 주최의 소규모 공모전이에요. 상금 50만원."
+    },
+    {
+      "source": "curated",
+      "id": "g2",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "넷마블 대학생 서포터즈 마블챌린저 26기",
+      "host": "넷마블",
+      "start": "2026-07-27",
+      "end": "2026-08-10",
+      "url": "https://career.netmarble.com/announce/view?anno_id=1837",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "서류전형 우대"
+    },
+    {
+      "source": "curated",
+      "id": "g3",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "효성프렌즈 대학생 서포터즈 8기",
+      "host": "효성그룹",
+      "start": "2026-07-27",
+      "end": "2026-08-09",
+      "url": "https://linkareer.com/activity/337463",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문"
+    },
+    {
+      "source": "curated",
+      "id": "g4",
+      "cat": "채용",
+      "kind": "apply",
+      "isBio": false,
+      "title": "효성그룹 하반기 신입·경력 채용",
+      "host": "효성그룹",
+      "start": "2026-09-07",
+      "end": "2026-09-20",
+      "url": "https://hyosung.recruiter.co.kr",
+      "trust": "verified",
+      "grades": [
+        "4학년"
+      ],
+      "tags": [
+        "gmp",
+        "rnd",
+        "sales"
+      ],
+      "note": "졸업(예정)자 대상"
+    },
+    {
+      "source": "curated",
+      "id": "g5",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 정부광고 아이디어 공모전",
+      "host": "한국언론진흥재단",
+      "start": "2026-08-12",
+      "end": "2026-09-21",
+      "url": "https://www.kpf-adidea.co.kr",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "영상·인쇄옥외·국민경험 부문"
+    },
+    {
+      "source": "curated",
+      "id": "g6",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 대국민 공공의료 공모전",
+      "host": "보건복지부 · 국립중앙의료원",
+      "start": "2026-10-06",
+      "end": "2026-11-05",
+      "url": "https://thinkyou.co.kr/contest/67224/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "공공의료 관련 아이디어·콘텐츠"
+    },
+    {
+      "source": "curated",
+      "id": "g7",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "5극3특 성장엔진 미래지도 AI 영상 공모전",
+      "host": "산업통상부",
+      "start": "2026-10-06",
+      "end": "2026-11-13",
+      "url": "https://thinkyou.co.kr/contest/67297/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "AI 활용 영상 제작"
+    },
+    {
+      "source": "curated",
+      "id": "g8",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "AI 활용 옥외광고 간판 디자인 공모전",
+      "host": "한국지방재정공제회 한국옥외광고센터",
+      "start": "2026-09-14",
+      "end": "2026-11-13",
+      "url": "https://thinkyou.co.kr/contest/66692/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "디자인·광고 기획"
+    },
+    {
+      "source": "curated",
+      "id": "g9",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 청년 어촌 창업 아이디어 공모전",
+      "host": "한국어촌어항공단",
+      "start": "2026-10-08",
+      "end": "2026-11-08",
+      "url": "https://thinkyou.co.kr/contest/67319/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "venture"
+      ],
+      "note": "청년 창업 아이디어 기획"
+    },
+    {
+      "source": "curated",
+      "id": "g10",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "금융사기 범죄 예방 숏폼 영상 공모전",
+      "host": "서민금융진흥원",
+      "start": "2026-10-01",
+      "end": "2026-10-30",
+      "url": "https://thinkyou.co.kr/contest/67120/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "보이스피싱·스미싱 예방 숏폼"
+    },
+    {
+      "source": "curated",
+      "id": "g11",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제18회 한국고전종합 DB 활용 공모전",
+      "host": "한국고전번역원",
+      "start": "2026-09-14",
+      "end": "2026-10-30",
+      "url": "https://thinkyou.co.kr/contest/66648/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "공공 DB 활용 콘텐츠·서비스 기획"
+    },
+    {
+      "source": "curated",
+      "id": "g12",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제7회 화학안전 실천의 순간 사진 공모전",
+      "host": "기후에너지환경부",
+      "start": "2026-10-05",
+      "end": "2026-10-30",
+      "url": "https://thinkyou.co.kr/contest/67304/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp"
+      ],
+      "note": "실험실·현장 화학안전 사진"
+    },
+    {
+      "source": "curated",
+      "id": "g13",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제44회 AI 교통안전 홍보작품 공모전",
+      "host": "한국도로교통공단",
+      "start": "2026-08-28",
+      "end": "2026-10-18",
+      "url": "https://thinkyou.co.kr/contest/66233/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales",
+        "ai"
+      ],
+      "note": "AI 활용 홍보 콘텐츠"
+    },
+    {
+      "source": "curated",
+      "id": "g14",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "DB그룹 제121회 NEW 대학생 기업경영 체험스쿨",
+      "host": "DB김준기문화재단",
+      "start": "2026-09-14",
+      "end": "2026-10-16",
+      "url": "https://thinkyou.co.kr/extAct/66680/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales",
+        "venture"
+      ],
+      "note": "기업 경영 실무 체험 프로그램"
+    },
+    {
+      "source": "curated",
+      "id": "g15",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 미래내일 일경험 인턴",
+      "host": "한국에듀테크산업협회",
+      "start": "2026-10-02",
+      "end": "2026-10-18",
+      "url": "https://thinkyou.co.kr/extAct/67326/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "정부 일경험 지원 인턴 프로그램"
+    },
+    {
+      "source": "curated",
+      "id": "g16",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "부산 BNK 썸 여자프로농구단 대학생 서포터즈 3기",
+      "host": "부산 BNK 썸 여자프로농구단",
+      "start": "2026-10-06",
+      "end": "2026-10-18",
+      "url": "https://thinkyou.co.kr/extAct/67310/",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "스포츠 마케팅·SNS 콘텐츠"
+    },
+    {
+      "source": "curated",
+      "id": "g17",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "플로우웍스 서포터즈 1기",
+      "host": "인디니티",
+      "start": "2026-10-08",
+      "end": "2026-10-22",
+      "url": "https://thinkyou.co.kr/extAct/67323/",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "신생 소규모 기업 주최예요. 활동 조건과 혜택을 꼼꼼히 확인하세요."
+    }
+  ],
+  "certs": [
+    {
+      "name": "바이오화학제품제조기사",
+      "type": "국가기술 · 기사",
+      "track": "gmp",
+      "trust": "verified",
+      "art": {
+        "main": "🧫",
+        "a": "🧬",
+        "b": "⚗️"
+      },
+      "tint": "bg-emerald-400/20",
+      "desc": "균주 관리·배양·멸균·품질분석 등 바이오 생산(GMP 현장) 직무를 직접 평가하는 자격이에요.",
+      "role": "바이오의약품·발효 생산, 공정 QC",
+      "detail": "실기는 필답형+작업형 복합형이에요.",
+      "caution": "모든 회차에 시행되지는 않을 수 있어요. 큐넷에서 회차를 확인하세요.",
+      "url": "https://www.q-net.or.kr/crf021.do?id=crf02101",
+      "urlLabel": "큐넷 접수"
+    },
+    {
+      "name": "GMP 실무 역량",
+      "type": "교육 이수형 스펙",
+      "track": "gmp",
+      "trust": "verified",
+      "art": {
+        "main": "🏭",
+        "a": "🧤",
+        "b": "✅"
+      },
+      "tint": "bg-sky-400/20",
+      "desc": "국내에는 GMP 국가자격이 따로 없어요. 협회·아카데미의 GMP 교육 이수가 사실상의 GMP 스펙이에요.",
+      "role": "제약 QA·QC, 밸리데이션, 생산",
+      "detail": "GMP 입문·QA·QC·Data Integrity·밸리데이션 과정 이수 이력을 자기소개서와 면접에서 활용해요.",
+      "action": "education",
+      "urlLabel": "관련 교육 보기"
+    },
+    {
+      "name": "화공기사",
+      "type": "국가기술 · 기사",
+      "track": "gmp",
+      "trust": "verified",
+      "art": {
+        "main": "⚙️",
+        "a": "🧪",
+        "b": "🔥"
+      },
+      "tint": "bg-orange-400/20",
+      "desc": "제약·바이오 생산기술 직무에서 범용적으로 인정받는 대표 공정 자격이에요.",
+      "role": "제약·화학 공정 엔지니어, 생산기술",
+      "detail": "정기 기사 일정(연 3회 회차 체계)을 따라요.",
+      "url": "https://www.q-net.or.kr/crf021.do?id=crf02101",
+      "urlLabel": "큐넷 접수"
+    },
+    {
+      "name": "임상연구 전문가 CCRP",
+      "type": "국제 민간 인증 · SOCRA",
+      "track": "rnd",
+      "trust": "verified",
+      "art": {
+        "main": "🩺",
+        "a": "📋",
+        "b": "💊"
+      },
+      "tint": "bg-rose-400/20",
+      "desc": "CRA·CRC 등 임상시험 직무를 위한 국제 인증이에요. Prometric 센터나 원격 감독 CBT로 응시해요.",
+      "role": "CRA·CRC 등 임상시험 직무",
+      "detail": "승인 후 1년 안에 시험 날짜를 잡으면 되고, 6주 전 신청을 권장해요.",
+      "caution": "임상연구 경력 증빙이 필요해요. 재학생은 CRC 경력을 쌓은 뒤의 목표예요. '임상시험관리사(SoC)'라는 이름의 국내 자격은 확인되지 않아 이 인증으로 안내해요.",
+      "url": "https://www.socra.org/certification/ccrp-certification-exam/computer-based-testing-application-process/",
+      "urlLabel": "공식 안내"
+    },
+    {
+      "name": "품질경영기사",
+      "type": "국가기술 · 기사",
+      "track": "gmp",
+      "trust": "verified",
+      "art": {
+        "main": "📊",
+        "a": "🔍",
+        "b": "✔️"
+      },
+      "tint": "bg-violet-400/20",
+      "desc": "통계적 품질관리 역량을 증명해요. 제약 QA 직무에서 GMP 교육과 함께 준비하는 경우가 많아요.",
+      "role": "제약 QA·QC, 품질보증",
+      "detail": "정기 기사 일정을 따라요.",
+      "url": "https://www.q-net.or.kr/crf021.do?id=crf02101",
+      "urlLabel": "큐넷 접수"
+    },
+    {
+      "name": "식품기사",
+      "type": "국가기술 · 기사",
+      "track": "rnd",
+      "trust": "verified",
+      "art": {
+        "main": "🥫",
+        "a": "🦠",
+        "b": "🌾"
+      },
+      "tint": "bg-amber-400/20",
+      "desc": "미생물·발효 지식을 식품·건강기능식품 R&D와 QA로 넓힐 때 유용해요.",
+      "role": "식품·건기식 R&D, QA",
+      "detail": "정기 기사 일정을 따라요.",
+      "url": "https://www.q-net.or.kr/crf021.do?id=crf02101",
+      "urlLabel": "큐넷 접수"
+    },
+    {
+      "name": "위험물산업기사",
+      "type": "국가기술 · 산업기사",
+      "track": "gmp",
+      "trust": "verified",
+      "art": {
+        "main": "🧯",
+        "a": "⚠️",
+        "b": "🛢️"
+      },
+      "tint": "bg-red-400/20",
+      "desc": "시약·용매를 다루는 생산 현장 직무에서 선임 요건이나 가산점으로 쓰이기도 해요.",
+      "role": "생산·설비·안전 관리",
+      "detail": "산업기사도 기사와 같은 정기 일정을 따라요.",
+      "url": "https://www.q-net.or.kr/crf021.do?id=crf02101",
+      "urlLabel": "큐넷 접수"
+    },
+    {
+      "name": "품질관리기술사",
+      "type": "국가기술 · 기술사",
+      "track": "gmp",
+      "trust": "verified",
+      "art": {
+        "main": "🏅",
+        "a": "📈",
+        "b": "🧠"
+      },
+      "tint": "bg-teal-400/20",
+      "desc": "품질 분야 최상위 국가기술자격이에요. 커리어 장기 목표로 잡는 자격이에요.",
+      "role": "품질 총괄 (장기 목표)",
+      "detail": "기사 취득 후 실무 경력이 있어야 응시할 수 있어요.",
+      "caution": "재학생은 응시 자격이 없어요.",
+      "url": "https://www.q-net.or.kr/crf021.do?id=crf02101",
+      "urlLabel": "큐넷 안내"
+    }
+  ],
+  "schedules": {
+    "gisaCurrent": {
+      "year": 2026,
+      "status": "confirmed",
+      "rows": [
+        {
+          "r": "1회",
+          "a": "01.12–01.15",
+          "w": "01.30–03.03",
+          "pa": "03.23–03.26",
+          "p": "04.18–05.06",
+          "f": "06.12",
+          "fd": "2026-06-12"
+        },
+        {
+          "r": "2회",
+          "a": "04.20–04.23",
+          "w": "05.09–05.29",
+          "pa": "06.22–06.25",
+          "p": "07.18–08.05",
+          "f": "09.11",
+          "fd": "2026-09-11"
+        },
+        {
+          "r": "3회",
+          "a": "07.20–07.23",
+          "w": "08.07–09.01",
+          "pa": "09.21–09.28",
+          "p": "10.24–11.13",
+          "f": "12.18",
+          "fd": "2026-12-18"
+        }
+      ]
+    },
+    "gisaNext": {
+      "year": 2027,
+      "status": "expected",
+      "rows": [
+        {
+          "r": "1회",
+          "a": "1월 중순",
+          "w": "1월 말–3월 초",
+          "pa": "3월 하순",
+          "p": "4월 중순–5월 초",
+          "f": "6월 중순"
+        },
+        {
+          "r": "2회",
+          "a": "4월 하순",
+          "w": "5월",
+          "pa": "6월 하순",
+          "p": "7월 중순–8월 초",
+          "f": "9월 중순"
+        },
+        {
+          "r": "3회",
+          "a": "7월 하순",
+          "w": "8월–9월 초",
+          "pa": "9월 하순",
+          "p": "10월 하순–11월 중순",
+          "f": "12월 중순"
+        }
+      ]
+    },
+    "toeic": {
+      "year": 2026,
+      "rows": [
+        {
+          "r": "580회",
+          "e": "10.11 (일)",
+          "a": "08.24–09.28",
+          "ed": "2026-10-11"
+        },
+        {
+          "r": "581회",
+          "e": "10.31 (토)",
+          "a": "09.14–10.19",
+          "ed": "2026-10-31"
+        },
+        {
+          "r": "582회",
+          "e": "11.15 (일)",
+          "a": "09.28–11.02",
+          "ed": "2026-11-15"
+        },
+        {
+          "r": "583회",
+          "e": "11.29 (일)",
+          "a": "10.12–11.16",
+          "ed": "2026-11-29"
+        },
+        {
+          "r": "584회",
+          "e": "12.13 (일)",
+          "a": "10.26–11.30",
+          "ed": "2026-12-13"
+        },
+        {
+          "r": "585회",
+          "e": "12.27 (일)",
+          "a": "11.09–12.14",
+          "ed": "2026-12-27"
+        }
+      ]
+    }
+  }
+}
