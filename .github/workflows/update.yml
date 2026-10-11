@@ -1,0 +1,42 @@
+name: Update data
+
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Crawl & merge
+        run: python update_data.py
+
+      - name: Validate JSON
+        run: python -m json.tool data.json > /dev/null
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data.json; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "chore(data): daily update $(TZ=Asia/Seoul date +%F)"
+          git push
