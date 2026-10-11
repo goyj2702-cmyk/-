@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Badge, Chevron, TrustBadge } from "./ui.jsx";
-import { EMOJI, WEEK, catName, fmt, pad, parse, statusOf, toKey } from "../lib/utils.js";
+import { EMOJI, WEEK, catName, fmt, pad, parse, statusOf, toKey } from "./utils.js";
 
 const LABELS = {
   apply: { start: "접수 시작", end: "접수 마감", single: "접수 마감" },

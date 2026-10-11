@@ -1,5 +1,5 @@
 import { Chip } from "./ui.jsx";
-import { GRADES, INTERESTS } from "../lib/utils.js";
+import { GRADES, INTERESTS } from "./utils.js";
 
 /** 학년(단일) + 관심 분야(복수) 개인화 바 — 값은 localStorage에 저장 */
 export default function ProfileBar({ profile, setProfile }) {

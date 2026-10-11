@@ -1,5 +1,5 @@
 import { Arrow, Badge, Empty, TrustBadge } from "./ui.jsx";
-import { CAT_STYLE, CAT_TABS, INTEREST_LABEL, catName, matchOf, periodOf, statusOf } from "../lib/utils.js";
+import { CAT_STYLE, CAT_TABS, INTEREST_LABEL, catName, matchOf, periodOf, statusOf } from "./utils.js";
 
 export function CategoryTabs({ value, onChange, counts }) {
   return (

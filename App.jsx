@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import useCurationData from "./hooks/useCurationData.js";
-import { Toggle } from "./components/ui.jsx";
-import ProfileBar from "./components/ProfileBar.jsx";
-import AssistantBrief from "./components/AssistantBrief.jsx";
-import ListView, { CategoryTabs } from "./components/ListView.jsx";
-import CalendarView from "./components/CalendarView.jsx";
-import CertView from "./components/CertView.jsx";
-import { LIST_CATS, matchOf, sortItems, statusOf, storage } from "./lib/utils.js";
+import useCurationData from "./useCurationData.js";
+import { Toggle } from "./ui.jsx";
+import ProfileBar from "./ProfileBar.jsx";
+import AssistantBrief from "./AssistantBrief.jsx";
+import ListView, { CategoryTabs } from "./ListView.jsx";
+import CalendarView from "./CalendarView.jsx";
+import CertView from "./CertView.jsx";
+import { LIST_CATS, matchOf, sortItems, statusOf, storage } from "./utils.js";
 
 const TABS = [
   { key: "list", label: "전체 공고" },
@@ -115,7 +115,7 @@ export default function App() {
         {status === "error" && (
           <div className="rounded-2xl bg-rose-500/10 p-6 text-sm text-rose-200 ring-1 ring-rose-500/30">
             <p className="font-semibold">데이터를 불러오지 못했어요.</p>
-            <p className="mt-1 text-rose-200/70">{error} · public/data.json이 있는지 확인하세요.</p>
+            <p className="mt-1 text-rose-200/70">{error} · data.json이 있는지 확인하세요.</p>
             <button type="button" onClick={reload} className="mt-4 rounded-lg bg-rose-500/20 px-3 py-1.5 font-semibold transition-all hover:bg-rose-500/30 active:scale-95">
               다시 시도
             </button>

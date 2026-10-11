@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "data": "python3 scripts/update_data.py",
-    "data:offline": "python3 scripts/update_data.py --offline"
+    "data": "python3 update_data.py",
+    "data:offline": "python3 update_data.py --offline"
   },
   "dependencies": {
     "react": "^18.3.1",

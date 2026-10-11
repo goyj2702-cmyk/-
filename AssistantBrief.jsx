@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { diff, fmt, matchOf, statusOf } from "../lib/utils.js";
+import { diff, fmt, matchOf, statusOf } from "./utils.js";
 
 /**
  * "AI 비서" 오늘의 브리핑 — 규칙 기반 요약 (외부 AI API 호출 없음)

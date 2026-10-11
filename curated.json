@@ -1,5 +1,5 @@
 {
-  "_comment": "사람이 직접 검증해 관리하는 데이터. 크롤러 결과(scraped)와 병합되어 public/data.json이 됩니다.",
+  "_comment": "사람이 직접 검증해 관리하는 데이터. 크롤러 결과(scraped)와 병합되어 data.json이 됩니다.",
   "items": [
     {
       "source": "curated",

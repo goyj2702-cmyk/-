@@ -1,6 +1,6 @@
 name: Update data
 
-# 매일 새벽 03:00 KST(= 18:00 UTC 전날)에 공고를 수집해 public/data.json을 갱신
+# 매일 새벽 03:00 KST(= 18:00 UTC 전날)에 공고를 수집해 data.json을 갱신
 on:
   schedule:
     - cron: "0 18 * * *"
@@ -26,19 +26,19 @@ jobs:
 
       # 표준 라이브러리만 쓰므로 pip install 단계가 없음
       - name: Crawl & merge
-        run: python scripts/update_data.py
+        run: python update_data.py
 
       - name: Validate JSON
-        run: python -m json.tool public/data.json > /dev/null
+        run: python -m json.tool data.json > /dev/null
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- public/data.json; then
+          if git diff --quiet -- data.json; then
             echo "No data changes."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data.json
+          git add data.json
           git commit -m "chore(data): daily update $(TZ=Asia/Seoul date +%F)"
           git push

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 /**
- * public/data.json을 불러온다.
+ * 저장소 루트의 data.json을 불러온다 (vite.config.js의 플러그인이 배포 결과에 포함시킴).
  * - 같은 출처(정적 파일)에서 읽으므로 CORS 문제가 없음
  * - 크롤링은 GitHub Actions(서버)에서 끝내고 결과 파일만 배포
  * - BASE_URL을 붙여 GitHub Pages 하위 경로에서도 동작

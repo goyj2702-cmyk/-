@@ -2,11 +2,11 @@
 """
 bio-spec AI 비서 — 데이터 갱신 스크립트
 
-data/curated.json(사람이 검증한 데이터) + 크롤링 결과를 병합해
-public/data.json 을 만든다. GitHub Actions에서 매일 새벽 실행된다.
+curated.json(사람이 검증한 데이터) + 크롤링 결과를 병합해
+data.json 을 만든다. GitHub Actions에서 매일 새벽 실행된다.
 
-  python scripts/update_data.py            # 크롤링 + 병합
-  python scripts/update_data.py --offline  # 네트워크 없이 병합만 (로컬 테스트용)
+  python update_data.py            # 크롤링 + 병합
+  python update_data.py --offline  # 네트워크 없이 병합만 (로컬 테스트용)
 
 설계 원칙
 - 표준 라이브러리만 사용 (pip 설치 불필요)
@@ -30,9 +30,9 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urljoin
 
-ROOT = Path(__file__).resolve().parent.parent
-CURATED = ROOT / "data" / "curated.json"
-OUTPUT = ROOT / "public" / "data.json"
+ROOT = Path(__file__).resolve().parent  # 모든 파일이 한 폴더(저장소 루트)에 있는 구조
+CURATED = ROOT / "curated.json"
+OUTPUT = ROOT / "data.json"
 
 KST = timezone(timedelta(hours=9))
 UA = "bio-spec-curation-bot/1.0 (+https://github.com/; daily, polite)"
@@ -238,7 +238,7 @@ def main() -> int:
     now = datetime.now(KST)
     curated = load_json(CURATED, None)
     if curated is None:
-        print("data/curated.json을 읽을 수 없습니다.", file=sys.stderr)
+        print("curated.json을 읽을 수 없습니다.", file=sys.stderr)
         return 1
     previous = load_json(OUTPUT, {})
 

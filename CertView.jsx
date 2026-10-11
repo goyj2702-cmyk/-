@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Arrow, SectionHead, Table, TrustBadge } from "./ui.jsx";
-import { diff } from "../lib/utils.js";
+import { diff } from "./utils.js";
 
 const QNET = "https://www.q-net.or.kr/crf021.do?id=crf02101";
 const TOEIC = "https://exam.toeic.co.kr/";
@@ -123,7 +123,7 @@ export default function CertView({ certs, schedules, hideClosed, profile, onEduc
           }
           desc={
             next.status === "expected"
-              ? "시행계획 공고 전이에요(예년 11~12월 발표). 전년도 패턴 기반의 예상 시기이니, 공고 후 data/curated.json을 확정 일정으로 바꿔 주세요."
+              ? "시행계획 공고 전이에요(예년 11~12월 발표). 전년도 패턴 기반의 예상 시기이니, 공고 후 curated.json을 확정 일정으로 바꿔 주세요."
               : "큐넷 공고 확정 일정이에요."
           }
           link={QNET}
