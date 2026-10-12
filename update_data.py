@@ -227,7 +227,33 @@ def merge(curated: dict, scraped: list[dict], previous: dict, today: date) -> li
     curated_urls = {u for u, _ in curated_urls_ids}
     merged = list(curated_items) + [it for u, it in by_url.items() if u not in curated_urls]
     # curated는 날짜가 지나도 남김(캘린더·이력용), 크롤링 항목만 오래된 것 정리
-    return [it for it in merged if it.get("source") == "curated" or not is_stale(it, today)]
+    kept = [it for it in merged if it.get("source") == "curated" or not is_stale(it, today)]
+    return stamp_first_seen(kept, previous, today)
+
+
+def stamp_first_seen(items: list[dict], previous: dict, today: date) -> list[dict]:
+    """
+    'NEW' 뱃지용: 각 공고가 data.json에 처음 들어온 날짜(firstSeen)를 기록한다.
+    - 직전 data.json에 같은 id가 있으면 그 firstSeen을 그대로 이어받음
+    - 직전 파일에 firstSeen이 없던 시절의 항목(최초 도입 시)은 접수 시작일과
+      직전 갱신일 중 이른 날짜로 채워, 기존 공고가 한꺼번에 NEW로 뜨지 않게 함
+    - 처음 보는 id는 오늘 날짜
+    """
+    prev_items = {it.get("id"): it for it in previous.get("items", [])}
+    prev_updated = (previous.get("meta", {}).get("updatedAt") or "")[:10]
+    out = []
+    for it in items:
+        it = dict(it)
+        before = prev_items.get(it.get("id"))
+        if before and before.get("firstSeen"):
+            it["firstSeen"] = before["firstSeen"]
+        elif before:
+            candidates = [d for d in (it.get("start"), prev_updated) if d]
+            it["firstSeen"] = min(candidates) if candidates else today.isoformat()
+        else:
+            it["firstSeen"] = today.isoformat()
+        out.append(it)
+    return out
 
 
 def main() -> int:

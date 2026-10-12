@@ -113,3 +113,31 @@ export const storage = {
     }
   },
 };
+
+/* ------------------------------------------------------------------ */
+/*  NEW 뱃지 · 읽음 표시                                                */
+/* ------------------------------------------------------------------ */
+
+export const NEW_DAYS = 3; // 처음 들어온 지 며칠까지 NEW로 볼지
+
+/**
+ * NEW 조건 (모두 만족해야 함)
+ *  1) data.json에 들어온 날(firstSeen)이 NEW_DAYS일 이내
+ *     - firstSeen이 아직 없는 옛 데이터는 접수 시작일(start)로 대신 판단
+ *  2) 아직 마감되지 않음
+ *  3) 사용자가 '읽음' 체크하지 않았고, '공고 보러 가기'로 열어보지도 않음
+ */
+export const isNewItem = (it, { read, opened }) => {
+  if (it.always) return false;
+  const seen = it.firstSeen || (it.kind === "apply" ? it.start : null);
+  if (!seen) return false;
+  const age = -diff(seen); // 오늘 기준 며칠 전에 들어왔는지
+  if (age < 0 || age >= NEW_DAYS) return false;
+  if (statusOf(it).closed) return false;
+  return !read.has(it.id) && !opened.has(it.id);
+};
+
+/** localStorage에 id 목록을 Set으로 저장/복원 (오래된 id는 data.json에 없으면 자동 정리) */
+export const loadIdSet = (key) => new Set(storage.get(key, []));
+export const saveIdSet = (key, set, validIds) =>
+  storage.set(key, [...set].filter((id) => !validIds || validIds.has(id)));

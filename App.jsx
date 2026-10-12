@@ -6,7 +6,7 @@ import AssistantBrief from "./AssistantBrief.jsx";
 import ListView, { CategoryTabs } from "./ListView.jsx";
 import CalendarView from "./CalendarView.jsx";
 import CertView from "./CertView.jsx";
-import { LIST_CATS, matchOf, sortItems, statusOf, storage } from "./utils.js";
+import { LIST_CATS, isNewItem, loadIdSet, matchOf, saveIdSet, sortItems, statusOf, storage } from "./utils.js";
 
 const TABS = [
   { key: "list", label: "전체 공고" },
@@ -33,6 +33,33 @@ export default function App() {
   useEffect(() => storage.set("bs.hideClosed", hideClosed), [hideClosed]);
   useEffect(() => storage.set("bs.bioOnly", bioOnly), [bioOnly]);
 
+  // ── 읽음 표시 · NEW 판정용 상태 (localStorage에 저장 → 새로고침·재접속해도 유지) ──
+  const [read, setRead] = useState(() => loadIdSet("bs.read")); // 사용자가 직접 '읽음' 체크한 공고
+  const [opened, setOpened] = useState(() => loadIdSet("bs.opened")); // '공고 보러 가기'로 열어본 공고 (NEW만 꺼짐)
+  const [hideRead, setHideRead] = useState(() => storage.get("bs.hideRead", false));
+  const [newOnly, setNewOnly] = useState(false);
+
+  // data.json에서 사라진 공고 id는 저장할 때 정리해서 저장 공간이 계속 늘지 않게 함
+  const validIds = useMemo(() => (data ? new Set(data.items.map((it) => it.id)) : null), [data]);
+  useEffect(() => saveIdSet("bs.read", read, validIds), [read, validIds]);
+  useEffect(() => saveIdSet("bs.opened", opened, validIds), [opened, validIds]);
+  useEffect(() => storage.set("bs.hideRead", hideRead), [hideRead]);
+
+  const readState = useMemo(
+    () => ({
+      read,
+      isNew: (it) => isNewItem(it, { read, opened }),
+      toggleRead: (id) =>
+        setRead((prev) => {
+          const next = new Set(prev);
+          next.has(id) ? next.delete(id) : next.add(id);
+          return next;
+        }),
+      markOpened: (id) => setOpened((prev) => (prev.has(id) ? prev : new Set(prev).add(id))),
+    }),
+    [read, opened]
+  );
+
   // 공통 필터 (리스트·캘린더·브리핑 공유)
   const items = useMemo(() => {
     if (!data) return [];
@@ -48,7 +75,14 @@ export default function App() {
 
   // 공고 리스트: 토익(어학)·자격증 일정 제외
   const listBase = useMemo(() => items.filter((it) => LIST_CATS.includes(it.cat)), [items]);
-  const listItems = useMemo(() => (listCat === "전체" ? listBase : listBase.filter((it) => it.cat === listCat)), [listBase, listCat]);
+  const catItems = useMemo(() => (listCat === "전체" ? listBase : listBase.filter((it) => it.cat === listCat)), [listBase, listCat]);
+  const newCount = catItems.filter(readState.isNew).length;
+  const readCount = catItems.filter((it) => read.has(it.id)).length;
+  // NEW 공고를 맨 위로, 읽은 공고는 숨기기 옵션 적용
+  const listItems = useMemo(() => {
+    const visible = catItems.filter((it) => (!hideRead || !read.has(it.id)) && (!newOnly || readState.isNew(it)));
+    return [...visible].sort((a, b) => Number(readState.isNew(b)) - Number(readState.isNew(a)));
+  }, [catItems, hideRead, newOnly, read, readState]);
   const counts = useMemo(() => {
     const c = { 전체: listBase.length };
     LIST_CATS.forEach((k) => (c[k] = listBase.filter((it) => it.cat === k).length));
@@ -141,9 +175,44 @@ export default function App() {
                     </p>
                   </div>
                   <CategoryTabs value={listCat} onChange={setListCat} counts={counts} />
+                  <div className="flex flex-wrap items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setNewOnly((v) => !v)}
+                      aria-pressed={newOnly}
+                      className={`flex select-none items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold ring-1 transition-all duration-200 active:scale-95 ${
+                        newOnly ? "bg-gradient-to-r from-fuchsia-500 to-orange-400 text-white ring-fuchsia-400" : "bg-slate-800/60 text-fuchsia-300 ring-fuchsia-500/30 hover:bg-slate-800"
+                      }`}
+                    >
+                      ✨ NEW만 보기 <span className="tabular-nums opacity-80">{newCount}</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setHideRead((v) => !v)}
+                      aria-pressed={hideRead}
+                      className={`flex select-none items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold ring-1 transition-all duration-200 active:scale-95 ${
+                        hideRead ? "bg-emerald-500 text-slate-950 ring-emerald-400" : "bg-slate-800/60 text-slate-400 ring-white/10 hover:bg-slate-800 hover:text-slate-200"
+                      }`}
+                    >
+                      ✓ 읽은 공고 숨기기 <span className="tabular-nums opacity-80">{readCount}</span>
+                    </button>
+                    {read.size > 0 && (
+                      <button
+                        type="button"
+                        onClick={() => window.confirm("모든 읽음 표시를 지울까요?") && setRead(new Set())}
+                        className="select-none rounded-full px-3 py-1.5 text-xs text-slate-500 transition-all hover:text-slate-300 active:scale-95"
+                      >
+                        읽음 표시 초기화
+                      </button>
+                    )}
+                  </div>
                 </div>
                 <div key={listCat} className="animate-view-in">
-                  <ListView items={listItems} profile={profile} />
+                  <ListView
+                    items={listItems}
+                    profile={profile}
+                    readState={readState}
+                  />
                 </div>
               </div>
             )}
