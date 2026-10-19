@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-19T10:37+09:00",
-    "itemCount": 74,
+    "updatedAt": "2026-10-20T07:05+09:00",
+    "itemCount": 85,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 60
+        "count": 58
       }
     }
   },
@@ -1817,6 +1817,269 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-10-19"
+    },
+    {
+      "id": "lk-353777",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[TV CHOSUN] 2026 글로벌 리더스 포럼 대학생 서포터즈 모집",
+      "host": "TV CHOSUN",
+      "start": "2026-09-30",
+      "end": "2026-10-28",
+      "url": "https://linkareer.com/activity/353777",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-354306",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "부산 BNK 썸 여자프로농구단 대학생 서포터즈 3기 모집",
+      "host": "엔터트루커뮤니케이션",
+      "start": "2026-10-06",
+      "end": "2026-10-20",
+      "url": "https://linkareer.com/activity/354306",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-357992",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[참여자 모집] 2026 남동구 마을공동체 한마당",
+      "host": "자치교육 사회적협동조합 길잡이",
+      "start": "2026-10-19",
+      "end": "2026-10-30",
+      "url": "https://linkareer.com/activity/357992",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-357988",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[마감임박] 시원한 가을 농촌으로 떠날 농촌봉사활동 단원 모집!",
+      "host": "굿네이버스 경북사업본부",
+      "start": "2026-09-28",
+      "end": "2026-10-21",
+      "url": "https://linkareer.com/activity/357988",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-357977",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "위홈 글로벌 서포터즈 1기 모집",
+      "host": "주식회사 위홈",
+      "start": "2026-10-19",
+      "end": "2026-10-31",
+      "url": "https://linkareer.com/activity/357977",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-357999",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 MTN 대한민국 중소기업 광고 공모전",
+      "host": "머니투데이방송",
+      "start": "2026-11-02",
+      "end": "2026-11-13",
+      "url": "https://linkareer.com/activity/357999",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-357998",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 함안복합문학관 디카시 공모전",
+      "host": "함안군",
+      "start": "2026-10-15",
+      "end": "2026-11-13",
+      "url": "https://linkareer.com/activity/357998",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-357967",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "Seoul | Bloom x Genspark x FuriosaAI · THE CLOSER",
+      "host": "클라이원트",
+      "start": "2026-10-19",
+      "end": "2026-10-25",
+      "url": "https://linkareer.com/activity/357967",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-357936",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[대박 이벤트] MINDSOS X 원밀리언 '한호흡 챌린지' 같이 할 사람?!",
+      "host": "마인드풀커넥트",
+      "start": "2026-10-19",
+      "end": "2026-10-31",
+      "url": "https://linkareer.com/activity/357936",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-357889",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "DIGITAL EXCELLENCE AWARDS 2026",
+      "host": "잡오브브라더스",
+      "start": "2026-10-19",
+      "end": "2026-11-09",
+      "url": "https://linkareer.com/activity/357889",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-357887",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제1회 우리학교 청소년 문학상 공모",
+      "host": "우리학교 출판사",
+      "start": "2026-10-16",
+      "end": "2027-09-30",
+      "url": "https://linkareer.com/activity/357887",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-20"
     }
   ],
   "certs": [
