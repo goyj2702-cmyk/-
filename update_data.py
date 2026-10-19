@@ -63,8 +63,11 @@ TAG_RULES = {
 # 주최처가 이 패턴에 맞으면 ✅ 공신력 인증, 아니면 ⚠️ 주의/비공식
 TRUSTED_HOST = re.compile(
     r"(부|처|청|원|공단|공사|진흥원|재단|협회|학회|위원회|대학교|연구원|공제회|은행|그룹|"
-    r"삼성|LG|SK|현대|롯데|CJ|한화|포스코|GS|KT|네이버|카카오|넷마블|효성|DB)"
+    r"삼성|LG|SK|현대|롯데|CJ|한화|포스코|GS|KT|KG|네이버|카카오|넷마블|효성|DB|"
+    r"뉴스|일보|신문|방송|TV|복지재단|굿네이버스|월드비전|적십자)"
 )
+# 지자체: '양양군', '서울시', '양천구', '강원특별자치도'처럼 시·군·구·도로 끝나는 기관명
+LOCAL_GOV = re.compile(r"(특별자치도|특별자치시|특별시|광역시|[가-힣]{1,5}(시|군|구|도))$")
 
 
 def classify(title: str, host: str, path_kind: str) -> dict:
@@ -80,7 +83,7 @@ def classify(title: str, host: str, path_kind: str) -> dict:
         "cat": cat,
         "isBio": any(k in text for k in BIO_KEYWORDS),
         "tags": tags,
-        "trust": "verified" if host and TRUSTED_HOST.search(host) else "caution",
+        "trust": "verified" if host and (TRUSTED_HOST.search(host) or LOCAL_GOV.search(host.strip())) else "caution",
     }
 
 
@@ -186,9 +189,149 @@ def scrape_thinkyou(log: list) -> list[dict]:
     return items
 
 
+# ------------------------------------------------------------------ #
+#  소스 2: 링커리어 (linkareer.com) 대외활동·공모전
+#  - 목록: /list/activity, /list/contest 첫 페이지(최신순)에서 /activity/{id} 링크 수집
+#  - 상세: ① 페이지에 내장된 Next.js 데이터(__NEXT_DATA__)에서 제목·기관·모집기간을 찾고
+#          ② 없으면 화면 텍스트('시작일2026.10.13 / 마감일2026.11.12')를 정규식으로 읽음
+#  ※ 제목·주최·기간·원문 링크만 저장하고 본문은 복제하지 않음
+# ------------------------------------------------------------------ #
+
+LINKAREER = "https://linkareer.com"
+LINKAREER_LISTS = [("/list/activity", "extAct"), ("/list/contest", "contest")]
+LINKAREER_MAX_PER_LIST = 30
+RE_LK_LINK = re.compile(r'href="/activity/(\d+)"')
+RE_LK_START = re.compile(r"시작일\s*(\d{4})[.\-](\d{1,2})[.\-](\d{1,2})")
+RE_LK_END = re.compile(r"마감일\s*(\d{4})[.\-](\d{1,2})[.\-](\d{1,2})")
+RE_LK_TARGET = re.compile(r"참여대상\s*\n?\s*([^\n]{2,80})")
+RE_NEXT_DATA = re.compile(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
+
+
+def _to_iso(v) -> str | None:
+    """링커리어 날짜 값(epoch ms/s, ISO 문자열, 2026.10.13)을 YYYY-MM-DD로."""
+    if v is None or v == "":
+        return None
+    if isinstance(v, (int, float)):
+        ts = v / 1000 if v > 1e11 else v
+        return datetime.fromtimestamp(ts, KST).date().isoformat()
+    m = re.match(r"(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})", str(v))
+    return f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}" if m else None
+
+
+def _find_activity(node, activity_id: str):
+    """__NEXT_DATA__ JSON 안에서 이 공고(제목 + 모집기간 필드를 가진 객체)를 찾는다."""
+    stack = [node]
+    while stack:
+        cur = stack.pop()
+        if isinstance(cur, dict):
+            keys = cur.keys()
+            if "title" in keys and ("recruitCloseAt" in keys or "recruitStartAt" in keys):
+                if str(cur.get("id", activity_id)) == activity_id:
+                    return cur
+            stack.extend(cur.values())
+        elif isinstance(cur, list):
+            stack.extend(cur)
+    return None
+
+
+def _org_name(act: dict) -> str:
+    for key in ("organizationName", "orgName", "companyName", "hostName"):
+        if isinstance(act.get(key), str) and act[key].strip():
+            return act[key].strip()
+    org = act.get("organization") or act.get("company") or {}
+    if isinstance(org, dict):
+        for key in ("name", "title", "organizationName"):
+            if isinstance(org.get(key), str) and org[key].strip():
+                return org[key].strip()
+    return ""
+
+
+def parse_linkareer_detail(raw: str, activity_id: str) -> dict | None:
+    """상세 페이지 HTML → {title, host, start, end, target}. 필수값이 없으면 None."""
+    title = host = start = end = ""
+    m = RE_NEXT_DATA.search(raw)
+    if m:
+        try:
+            act = _find_activity(json.loads(m.group(1)), activity_id)
+        except json.JSONDecodeError:
+            act = None
+        if act:
+            title = (act.get("title") or "").strip()
+            host = _org_name(act)
+            start = _to_iso(act.get("recruitStartAt")) or ""
+            end = _to_iso(act.get("recruitCloseAt")) or ""
+
+    text = html_to_text(raw)
+    if not title:
+        m_title = RE_TITLE.search(raw)
+        title = html.unescape(m_title.group(1)).split("|")[0].strip() if m_title else ""
+        title = re.sub(r"\s*-\s*링커리어.*$", "", title)
+    if not (start and end):
+        s, e = RE_LK_START.search(text), RE_LK_END.search(text)
+        if s and e:
+            start = f"{s.group(1)}-{int(s.group(2)):02d}-{int(s.group(3)):02d}"
+            end = f"{e.group(1)}-{int(e.group(2)):02d}-{int(e.group(3)):02d}"
+    if not host:
+        # 화면에서 제목 바로 다음 줄이 기관명 (예: "...모집\n2026 바이오미래포럼\n기업형태")
+        m_host = re.search(re.escape(title) + r"\s*\n\s*([^\n]{2,60})\s*\n\s*(기업형태|주최)", text) if title else None
+        host = m_host.group(1).strip() if m_host else ""
+    target_m = RE_LK_TARGET.search(text)
+    if not (title and start and end):
+        return None
+    return {"title": html.unescape(title), "host": html.unescape(host), "start": start, "end": end,
+            "target": target_m.group(1).strip() if target_m else ""}
+
+
+def scrape_linkareer(log: list) -> list[dict]:
+    links: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for path, kind in LINKAREER_LISTS:
+        listing = get(LINKAREER + path)
+        found = [n for n in RE_LK_LINK.findall(listing) if n not in seen]
+        for n in found[:LINKAREER_MAX_PER_LIST]:
+            seen.add(n)
+            links.append((n, kind))
+        log.append(f"linkareer{path}: {len(found)} links found")
+
+    items = []
+    for num, kind in links:
+        url = f"{LINKAREER}/activity/{num}"
+        try:
+            parsed = parse_linkareer_detail(get(url), num)
+        except Exception as e:
+            log.append(f"linkareer: skip {url} ({e})")
+            continue
+        if not parsed:
+            continue
+        title, host, target = parsed["title"], parsed["host"], parsed["target"]
+        if any(k in title for k in EXCLUDE_KEYWORDS):
+            continue
+        if target and not any(h in target for h in STUDENT_TARGET_HINTS + ["대상 제한 없음"]):
+            continue
+        c = classify(title, host, kind)
+        items.append({
+            "id": f"lk-{num}",
+            "cat": c["cat"],
+            "kind": "apply",
+            "isBio": c["isBio"],
+            "title": title,
+            "host": host or "주최 정보 없음",
+            "start": parsed["start"],
+            "end": parsed["end"],
+            "url": url,
+            "trust": c["trust"] if host else "caution",
+            "grades": ALL_GRADES,
+            "tags": c["tags"],
+            "note": "링커리어 공고 원문" + ("" if c["trust"] == "verified" and host else " · 주최 규모를 확인하세요"),
+            "source": "linkareer",
+        })
+    log.append(f"linkareer: {len(items)} items parsed")
+    return items
+
+
 # 새 소스를 추가하려면: 함수를 만들고 SCRAPERS에 등록하세요.
 # 각 함수는 위 스키마의 dict 리스트를 돌려주면 됩니다.
-SCRAPERS = {"thinkyou": scrape_thinkyou}
+SCRAPERS = {"thinkyou": scrape_thinkyou, "linkareer": scrape_linkareer}
 
 
 # ------------------------------------------------------------------ #
@@ -228,7 +371,31 @@ def merge(curated: dict, scraped: list[dict], previous: dict, today: date) -> li
     merged = list(curated_items) + [it for u, it in by_url.items() if u not in curated_urls]
     # curated는 날짜가 지나도 남김(캘린더·이력용), 크롤링 항목만 오래된 것 정리
     kept = [it for it in merged if it.get("source") == "curated" or not is_stale(it, today)]
-    return stamp_first_seen(kept, previous, today)
+    return stamp_first_seen(dedupe_by_title(kept), previous, today)
+
+
+def _norm_title(t: str) -> str:
+    """'[양양군] 2026 양양군 영상 공모전 (~11/12)' → '2026양양군영상공모전' 처럼 비교용으로 정리."""
+    t = re.sub(r"\[[^\]]*\]|\([^)]*\)|<[^>]*>", "", t or "")
+    return re.sub(r"[^0-9A-Za-z가-힣]", "", t).lower()
+
+
+def dedupe_by_title(items: list[dict]) -> list[dict]:
+    """
+    씽유·링커리어에 같은 공고가 함께 올라온 경우 하나만 남긴다.
+    우선순위: curated(사람 검증) > ✅ 공신력 인증 > 먼저 들어온 순서
+    """
+    rank = lambda it: (it.get("source") != "curated", it.get("trust") != "verified")
+    best: dict[str, dict] = {}
+    order: list[str] = []
+    for it in items:
+        key = _norm_title(it.get("title", "")) or it.get("id")
+        if key not in best:
+            best[key] = it
+            order.append(key)
+        elif rank(it) < rank(best[key]):
+            best[key] = it
+    return [best[k] for k in order]
 
 
 def stamp_first_seen(items: list[dict], previous: dict, today: date) -> list[dict]:
