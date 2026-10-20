@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-20T07:05+09:00",
-    "itemCount": 85,
+    "updatedAt": "2026-10-21T06:22+09:00",
+    "itemCount": 99,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 58
+        "count": 60
       }
     }
   },
@@ -2080,6 +2080,341 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "lk-352849",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[아이쿠스] 2026 겨울 이집트 드리머즈 3기 모집✈️｜이집트여행·문화교류·해외봉사",
+      "host": "아이쿠스",
+      "start": "2026-09-23",
+      "end": "2026-12-22",
+      "url": "https://linkareer.com/activity/352849",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-323285",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "청년 국가재정 마스터 클래스 참여자 모집 (~11/18)",
+      "host": "재단법인NSI",
+      "start": "2026-05-26",
+      "end": "2026-11-18",
+      "url": "https://linkareer.com/activity/323285",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358386",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 아주경제 증권포럼",
+      "host": "주식회사 아주뉴스코퍼레이션",
+      "start": "2026-10-20",
+      "end": "2026-11-01",
+      "url": "https://linkareer.com/activity/358386",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358349",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2027학년도 청주시 청소년 참여위원회 '약속' 신규위원을 모집",
+      "host": "청주시청소년수련관",
+      "start": "2026-10-20",
+      "end": "2026-11-02",
+      "url": "https://linkareer.com/activity/358349",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358332",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 생활무전기 정책홍보단 모집",
+      "host": "한국방송통신전파진흥원",
+      "start": "2026-10-20",
+      "end": "2026-11-08",
+      "url": "https://linkareer.com/activity/358332",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-351157",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "한국투자증권 대학생 모의투자대회 '한투모투배틀'",
+      "host": "한국투자증권(주)",
+      "start": "2026-09-21",
+      "end": "2026-10-31",
+      "url": "https://linkareer.com/activity/351157",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-342034",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[한국과학기술정보연구원] 2026 DATA·AI 분석 경진대회",
+      "host": "한국과학기술정보연구원",
+      "start": "2026-08-11",
+      "end": "2026-11-25",
+      "url": "https://linkareer.com/activity/342034",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd",
+        "ai"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358366",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "나무엑스 AI 숏폼 공모전",
+      "host": "SK인텔릭스(주)",
+      "start": "2026-10-19",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/358366",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358363",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "중구지역 장애인식개선 영상 공모전 '함께하는 행복한 세상’",
+      "host": "중구길벗장애인자립생활센터",
+      "start": "2026-10-14",
+      "end": "2026-11-13",
+      "url": "https://linkareer.com/activity/358363",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358360",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "용산국제업무지구 스마트도시 아이디어 공모",
+      "host": "서울특별시",
+      "start": "2026-10-20",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/358360",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358359",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 우수사례 공모전 「내 인생의 체인지업! 시즌4」",
+      "host": "서울시50플러스재단",
+      "start": "2026-10-19",
+      "end": "2026-11-10",
+      "url": "https://linkareer.com/activity/358359",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358358",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 AI 플레이 콘텐츠 제작 공모전 공모전",
+      "host": "중앙대학교",
+      "start": "2026-10-20",
+      "end": "2026-12-31",
+      "url": "https://linkareer.com/activity/358358",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358277",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 충북인재 정책제안 워크숍 및 대회 참여자 모집",
+      "host": "(주)공공디자인이즘",
+      "start": "2026-09-28",
+      "end": "2026-10-23",
+      "url": "https://linkareer.com/activity/358277",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "lk-358267",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[수원특례시] 제9회 수원화성관광 전국사진공모전",
+      "host": "수원특례시",
+      "start": "2026-10-01",
+      "end": "2026-10-29",
+      "url": "https://linkareer.com/activity/358267",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-21"
     }
   ],
   "certs": [
