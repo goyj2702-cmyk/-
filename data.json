@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-22T06:22+09:00",
-    "itemCount": 112,
+    "updatedAt": "2026-10-23T06:17+09:00",
+    "itemCount": 125,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -1131,7 +1131,7 @@
       "title": "[D.A.B] AI 미래배터리 캠퍼스 1기",
       "host": "KG ICT",
       "start": "2026-10-14",
-      "end": "2026-11-15",
+      "end": "2026-11-01",
       "url": "https://linkareer.com/activity/356459",
       "trust": "verified",
       "grades": [
@@ -2726,6 +2726,316 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-10-22"
+    },
+    {
+      "id": "lk-356842",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[씨티-경희대 NGO 인턴십 프로그램] 제21기 인턴십 프로그램 참가 인턴을 모집합니다!",
+      "host": "씨티-경희대 NGO인턴십 프로그램 사무국",
+      "start": "2026-10-26",
+      "end": "2026-11-23",
+      "url": "https://linkareer.com/activity/356842",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-358933",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "피에브 앰버서더 1기 모집",
+      "host": "피에브",
+      "start": "2026-10-20",
+      "end": "2026-11-01",
+      "url": "https://linkareer.com/activity/358933",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-358932",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "안동 K-헤리티지 단편영화 제작지원 참가자 모집",
+      "host": "(주)엣나우",
+      "start": "2026-10-20",
+      "end": "2026-10-26",
+      "url": "https://linkareer.com/activity/358932",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-358931",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": true,
+      "title": "『2026년 제1회 디지털 헬스케어 부트캠프』 참가자 모집",
+      "host": "필릭플랜",
+      "start": "2026-10-19",
+      "end": "2026-11-02",
+      "url": "https://linkareer.com/activity/358931",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-353328",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 POSTECH OIBC 빅데이터 경진대회",
+      "host": "에이치에너지",
+      "start": "2026-10-01",
+      "end": "2026-10-30",
+      "url": "https://linkareer.com/activity/353328",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-354228",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "행정안전부 2026 모바일신분증 아이디어 공모전",
+      "host": "행정안전부",
+      "start": "2026-10-01",
+      "end": "2026-10-30",
+      "url": "https://linkareer.com/activity/354228",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-359003",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[익산지방국토관리청] 제8회 아름다운 해상교량 사진 공모전",
+      "host": "익산지방국토관리청",
+      "start": "2026-04-01",
+      "end": "2026-11-16",
+      "url": "https://linkareer.com/activity/359003",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-359000",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[한국사회보장정보원] 2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
+      "host": "한국사회보장정보원",
+      "start": "2026-10-21",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/359000",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-358982",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "〈드골2: 자유의 시대〉 포스터·굿즈 공모전",
+      "host": "모비데이즈",
+      "start": "2026-10-22",
+      "end": "2026-11-11",
+      "url": "https://linkareer.com/activity/358982",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-358971",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "현대모비스 창립 50주년 굿즈 아이디어 공모전",
+      "host": "현대모비스",
+      "start": "2026-10-22",
+      "end": "2026-11-18",
+      "url": "https://linkareer.com/activity/358971",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-358928",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[종로구] 2026 종로구 아이디어 공모전",
+      "host": "종로구",
+      "start": "2026-10-06",
+      "end": "2026-10-30",
+      "url": "https://linkareer.com/activity/358928",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-358867",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[한국인터넷기업협회] 건전한 사이버 세상 만들기 '디지털 공감' 숏폼 공모전",
+      "host": "한국인터넷기업협회",
+      "start": "2026-10-26",
+      "end": "2026-12-05",
+      "url": "https://linkareer.com/activity/358867",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-358864",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[구리시상권활성화재단] 우리 동네 PICK! 쇼츠 공모전",
+      "host": "구리시상권활성화재단",
+      "start": "2026-10-12",
+      "end": "2026-10-30",
+      "url": "https://linkareer.com/activity/358864",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-23"
     }
   ],
   "certs": [
