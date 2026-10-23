@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-23T06:17+09:00",
-    "itemCount": 125,
+    "updatedAt": "2026-10-24T06:07+09:00",
+    "itemCount": 136,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -3036,6 +3036,269 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-10-23"
+    },
+    {
+      "id": "lk-355722",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "'전화로 하는 한국어 교실' 대학생 멘토 모집",
+      "host": "국제청년센터",
+      "start": "2026-10-14",
+      "end": "2026-10-31",
+      "url": "https://linkareer.com/activity/355722",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359356",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[KCC글라스와 방배ART유스센터&반포종합사회복지관이 함께하는 '김장 김치 담그기' 참가자 모집(~11/11)]",
+      "host": "서초구립방배유스센터",
+      "start": "2026-10-23",
+      "end": "2026-11-11",
+      "url": "https://linkareer.com/activity/359356",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359263",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[강남 아이즈 윈터 크루] 2026 강남 아이즈 미디어 윈터 페스타 공식 서포터즈 모집 공고",
+      "host": "디에스지엔터프라이즈(주)",
+      "start": "2026-10-26",
+      "end": "2026-11-09",
+      "url": "https://linkareer.com/activity/359263",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359234",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[진로진학멘토링] 학교로 직접 찾아가는 진로진학멘토링 오픈스카이 대학생 멘토 모집(상시모집)",
+      "host": "오픈스카이에듀",
+      "start": "2026-10-23",
+      "end": "2027-01-21",
+      "url": "https://linkareer.com/activity/359234",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359305",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 청도 바이브코딩 해커톤 with 해커그라운드",
+      "host": "해커그라운드",
+      "start": "2026-10-23",
+      "end": "2026-11-03",
+      "url": "https://linkareer.com/activity/359305",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359223",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS",
+      "host": "(주)소화소",
+      "start": "2026-10-14",
+      "end": "2026-12-30",
+      "url": "https://linkareer.com/activity/359223",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359216",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[과학기술정보통신부] 6G 서비스 시나리오 공모전",
+      "host": "과학기술정보통신부",
+      "start": "2026-10-08",
+      "end": "2026-11-08",
+      "url": "https://linkareer.com/activity/359216",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359212",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[부산대자율상권조합] 부산대 자율상권 통합브랜드 및 특화거리 네이밍 공모전",
+      "host": "부산대자율상권조합",
+      "start": "2026-10-19",
+      "end": "2026-10-28",
+      "url": "https://linkareer.com/activity/359212",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359208",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 화성 황금해안길 사진·숏폼 공모전",
+      "host": "화성시문화관광재단",
+      "start": "2026-10-19",
+      "end": "2026-11-24",
+      "url": "https://linkareer.com/activity/359208",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359206",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[카페385] 2027 전시작가 공개모집",
+      "host": "카페385",
+      "start": "2026-10-19",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/359206",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359205",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "마이웨이북스 나도 이제 출간작가, 원고 모집",
+      "host": "마이웨이북스",
+      "start": "2026-10-23",
+      "end": "2026-11-23",
+      "url": "https://linkareer.com/activity/359205",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-24"
     }
   ],
   "certs": [
