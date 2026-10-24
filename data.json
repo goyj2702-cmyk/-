@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-24T06:07+09:00",
-    "itemCount": 136,
+    "updatedAt": "2026-10-25T05:24+09:00",
+    "itemCount": 138,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -3299,6 +3299,55 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-10-24"
+    },
+    {
+      "id": "lk-359392",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[BDAI × 카카오페이] 서포터즈 모집 (~10/31)",
+      "host": "비디에이(BDA)",
+      "start": "2026-10-23",
+      "end": "2026-10-31",
+      "url": "https://linkareer.com/activity/359392",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-25"
+    },
+    {
+      "id": "lk-359386",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "⭐️롯데콘서트홀에서 말러 교향곡 제3번 연주할 오케스트라 단원 모집 (~11.01(일) 오후 23:59)⭐️",
+      "host": "사단법인 문화예술봉사단메리",
+      "start": "2026-10-11",
+      "end": "2026-11-01",
+      "url": "https://linkareer.com/activity/359386",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-25"
     }
   ],
   "certs": [
