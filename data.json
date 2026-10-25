@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-25T05:24+09:00",
-    "itemCount": 138,
+    "updatedAt": "2026-10-26T05:30+09:00",
+    "itemCount": 140,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -3348,6 +3348,56 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-10-25"
+    },
+    {
+      "id": "lk-358049",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "교촌치킨 서포터즈 K-스피커스 13기 모집",
+      "host": "교촌에프앤비",
+      "start": "2026-10-19",
+      "end": "2026-10-28",
+      "url": "https://linkareer.com/activity/358049",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-26"
+    },
+    {
+      "id": "lk-358840",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "실손24 영상 공모전",
+      "host": "실손24",
+      "start": "2026-11-02",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/358840",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-26"
     }
   ],
   "certs": [
