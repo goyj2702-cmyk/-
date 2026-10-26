@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-26T05:30+09:00",
-    "itemCount": 140,
+    "updatedAt": "2026-10-27T07:23+09:00",
+    "itemCount": 152,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 60
+        "count": 58
       }
     }
   },
@@ -3398,6 +3398,295 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-10-26"
+    },
+    {
+      "id": "lk-357495",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[네이버웹툰] 컷츠 메이크 크리에이터 크루 2기 모집",
+      "host": "네이버웹툰",
+      "start": "2026-10-14",
+      "end": "2026-10-28",
+      "url": "https://linkareer.com/activity/357495",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359165",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[버터샵] 서포터즈 버터크루 1기 모집",
+      "host": "버터샵",
+      "start": "2026-10-22",
+      "end": "2026-10-31",
+      "url": "https://linkareer.com/activity/359165",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359704",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[환경] 서촌 지구봉사단 33기 (~11/4)",
+      "host": "지구를지키는소소한행동 사회적협동조합",
+      "start": "2026-10-26",
+      "end": "2026-11-04",
+      "url": "https://linkareer.com/activity/359704",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359698",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[2026 청년 콘텐츠 우수 인재 양성 일자리 네트워킹]",
+      "host": "인천콘텐츠코리아랩",
+      "start": "2026-10-26",
+      "end": "2026-11-01",
+      "url": "https://linkareer.com/activity/359698",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-358929",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[국회미래연구원] 국회 미래세대 미래의제 공모전",
+      "host": "국회미래연구원",
+      "start": "2026-10-26",
+      "end": "2026-11-25",
+      "url": "https://linkareer.com/activity/358929",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359674",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제5회 LH가든(수원당수) 학생참여정원 아이디어공모",
+      "host": "한국토지주택공사",
+      "start": "2026-11-18",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/359674",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359672",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 전남자치경찰 홍보 콘텐츠 공모전",
+      "host": "전남자치경찰위원회",
+      "start": "2026-10-21",
+      "end": "2026-12-01",
+      "url": "https://linkareer.com/activity/359672",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359671",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 충남 문화CF 스타상 (청년예술부문) 공모",
+      "host": "충남문화관광재단",
+      "start": "2026-11-02",
+      "end": "2026-11-19",
+      "url": "https://linkareer.com/activity/359671",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359668",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 국방헬프콜 콘텐츠 공모전",
+      "host": "국방부조사본부",
+      "start": "2026-10-15",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/359668",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359654",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "두찜에서 맥북 네오 쏜다! 두찜 꿀조합 SNS 인증 이벤트",
+      "host": "주식회사 기영에프앤비",
+      "start": "2026-10-01",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/359654",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359615",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 서울중구시설관리공단 ESG혁신 아이디어 공모전",
+      "host": "서울중구시설관리공단",
+      "start": "2026-10-30",
+      "end": "2026-11-08",
+      "url": "https://linkareer.com/activity/359615",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
+    },
+    {
+      "id": "lk-359611",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "하나온 청년온 [2026 해방촌 신흥시장 AI 콘텐츠 공모전]",
+      "host": "소상공인시장진흥공단",
+      "start": "2026-10-19",
+      "end": "2026-11-02",
+      "url": "https://linkareer.com/activity/359611",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-27"
     }
   ],
   "certs": [
