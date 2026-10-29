@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-29T07:19+09:00",
-    "itemCount": 174,
+    "updatedAt": "2026-10-30T07:32+09:00",
+    "itemCount": 186,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -4208,6 +4208,284 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-10-29"
+    },
+    {
+      "id": "lk-360042",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제19기 기상청 국민정책기자단",
+      "host": "(주)와이위",
+      "start": "2026-10-26",
+      "end": "2026-11-19",
+      "url": "https://linkareer.com/activity/360042",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360761",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[트루쿡] 트루잇단 2기",
+      "host": "트루쿡",
+      "start": "2026-10-27",
+      "end": "2026-11-04",
+      "url": "https://linkareer.com/activity/360761",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360735",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "아빠표 우리아이 건강도시락 [ 두부 계란 유부초밥 ] 원데이 클래스",
+      "host": "프리즈미",
+      "start": "2026-10-29",
+      "end": "2026-11-13",
+      "url": "https://linkareer.com/activity/360735",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360732",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "OSELPIC SUPPORTERS 2기 모집",
+      "host": "오셀픽",
+      "start": "2026-10-29",
+      "end": "2026-11-04",
+      "url": "https://linkareer.com/activity/360732",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360431",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[hy(한국야쿠르트)] 제1회 메치니코프 신제품 공모전",
+      "host": "에치와이",
+      "start": "2026-10-28",
+      "end": "2026-11-17",
+      "url": "https://linkareer.com/activity/360431",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360714",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "애니메이션 HELL-BENT 사운드트랙 공모",
+      "host": "(주)레몬사운드",
+      "start": "2026-10-27",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/360714",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360706",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 천씨씨커피 Film Festa 영상 공모전",
+      "host": "천씨씨커피",
+      "start": "2026-06-01",
+      "end": "2026-11-16",
+      "url": "https://linkareer.com/activity/360706",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360695",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[대전광역시 사회혁신센터] 귀 쫑긋! '우리' 활용 공모전",
+      "host": "대전광역시 사회혁신센터",
+      "start": "2026-10-27",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/360695",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360691",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[문학광장] 격월간 문학광장 제122기 신인문학상 공모",
+      "host": "문학광장",
+      "start": "2026-11-01",
+      "end": "2026-11-25",
+      "url": "https://linkareer.com/activity/360691",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360689",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "로고 디자인 공모전: 유랑 사회적협동조합",
+      "host": "유랑 사회적협동조합",
+      "start": "2026-10-29",
+      "end": "2026-11-15",
+      "url": "https://linkareer.com/activity/360689",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360670",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "Echo of Reflectara 배경음악(BGM) 공모",
+      "host": "(주)레몬사운드",
+      "start": "2026-10-26",
+      "end": "2026-11-17",
+      "url": "https://linkareer.com/activity/360670",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-360667",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": true,
+      "title": "한국보훈복지의료공단 소셜미디어 채널 만족도 설문조사 이벤트",
+      "host": "한국보훈복지의료공단",
+      "start": "2026-10-27",
+      "end": "2026-11-10",
+      "url": "https://linkareer.com/activity/360667",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-30"
     }
   ],
   "certs": [
