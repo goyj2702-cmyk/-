@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-30T07:32+09:00",
-    "itemCount": 186,
+    "updatedAt": "2026-10-31T07:00+09:00",
+    "itemCount": 196,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 60
+        "count": 58
       }
     }
   },
@@ -4486,6 +4486,242 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-10-30"
+    },
+    {
+      "id": "lk-361064",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 유성구 관광 크리에이터 모집",
+      "host": "유성구청",
+      "start": "2026-10-30",
+      "end": "2026-11-11",
+      "url": "https://linkareer.com/activity/361064",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-361053",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "SNS 홍보단 모집(상조+가전제품 결합상품 소비자 피해예방 캠페인)",
+      "host": "한국여성소비자연합",
+      "start": "2026-10-30",
+      "end": "2026-11-04",
+      "url": "https://linkareer.com/activity/361053",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-361046",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2027 레드불 대학생 마케터 모집",
+      "host": "레드불 코리아 유한회사",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/361046",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-357358",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 서울 AI 디지털 배움터 청년 해커톤",
+      "host": "주식회사 구름",
+      "start": "2026-10-16",
+      "end": "2026-11-08",
+      "url": "https://linkareer.com/activity/357358",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-361067",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 지방소멸 대응 아이디어 공모전",
+      "host": "완도군",
+      "start": "2026-10-30",
+      "end": "2026-11-18",
+      "url": "https://linkareer.com/activity/361067",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-361066",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "국가무형유산 상설공연 창작 콘텐츠 개발을 위한 대국민 아이디어 발굴대회",
+      "host": "국가유산청",
+      "start": "2026-11-09",
+      "end": "2026-11-18",
+      "url": "https://linkareer.com/activity/361066",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-361063",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 제2회 Tech-GPT 서비스 경진대회",
+      "host": "한국전자정보통신산업진흥회",
+      "start": "2026-10-30",
+      "end": "2026-11-06",
+      "url": "https://linkareer.com/activity/361063",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-361061",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "한림대학교 졸업생 특화 프로그램 - 우수 프로그램 아이디어 공모전",
+      "host": "한림대학교 대학일자리플러스센터",
+      "start": "2026-10-30",
+      "end": "2026-11-12",
+      "url": "https://linkareer.com/activity/361061",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-361060",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2027 CICA 영 코리안 아티스트 개인전 시리즈 작가 공모",
+      "host": "CICA 미술관",
+      "start": "2026-10-30",
+      "end": "2026-11-18",
+      "url": "https://linkareer.com/activity/361060",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-361059",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제2회 코리아 프롬스(오케스트라 협연 콩쿠르)",
+      "host": "코리아 프롬스 조직위원회",
+      "start": "2026-10-30",
+      "end": "2026-11-23",
+      "url": "https://linkareer.com/activity/361059",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-10-31"
     }
   ],
   "certs": [
