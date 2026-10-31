@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-10-31T07:00+09:00",
-    "itemCount": 196,
+    "updatedAt": "2026-11-01T06:09+09:00",
+    "itemCount": 203,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -4722,6 +4722,173 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-10-31"
+    },
+    {
+      "id": "lk-361143",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "1365 파주 운정역 유기견 보호소 봉사자 모집",
+      "host": "국제청년센터",
+      "start": "2026-11-01",
+      "end": "2027-01-30",
+      "url": "https://linkareer.com/activity/361143",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-01"
+    },
+    {
+      "id": "lk-361129",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": true,
+      "title": "한화생명금융서비스 WM컨설팅지사 [금융영업캠퍼스 5기]",
+      "host": "한화금융서비스",
+      "start": "2026-10-31",
+      "end": "2026-11-26",
+      "url": "https://linkareer.com/activity/361129",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-01"
+    },
+    {
+      "id": "lk-361115",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[참가자 모집] AI를 활용한 웹서비스 제작, 개발부터 배포까지",
+      "host": "주식회사 패스파인더",
+      "start": "2026-10-30",
+      "end": "2026-11-12",
+      "url": "https://linkareer.com/activity/361115",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-01"
+    },
+    {
+      "id": "lk-358198",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "현대자동차그룹 차량용 앱 개발 공모전",
+      "host": "공모전 운영사무국",
+      "start": "2026-10-21",
+      "end": "2026-11-15",
+      "url": "https://linkareer.com/activity/358198",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-01"
+    },
+    {
+      "id": "lk-356503",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 대구광역시 기후·환경·탄소중립 공공데이터 AI 활용대회",
+      "host": "대구광역시 탄소중립지원센터",
+      "start": "2026-10-12",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/356503",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-01"
+    },
+    {
+      "id": "lk-354420",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제36회 시장경제칼럼 공모전",
+      "host": "재단법인 자유기업원",
+      "start": "2026-11-09",
+      "end": "2026-11-18",
+      "url": "https://linkareer.com/activity/354420",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-01"
+    },
+    {
+      "id": "lk-361137",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 현장문제 AX 아이디어 해커톤 참가자 모집",
+      "host": "주식회사 어치브모먼트",
+      "start": "2026-10-30",
+      "end": "2026-11-17",
+      "url": "https://linkareer.com/activity/361137",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-01"
     }
   ],
   "certs": [
