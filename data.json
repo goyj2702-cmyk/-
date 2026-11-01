@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-01T06:09+09:00",
-    "itemCount": 203,
+    "updatedAt": "2026-11-02T06:48+09:00",
+    "itemCount": 209,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -4889,6 +4889,144 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-01"
+    },
+    {
+      "id": "lk-351897",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[에듀콘] 해외 비즈니스 외국어 과정 겨울기수 교육생 모집 시작 (~11.8)",
+      "host": "(재)건설산업교육원",
+      "start": "2026-09-21",
+      "end": "2026-10-25",
+      "url": "https://linkareer.com/activity/351897",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-02"
+    },
+    {
+      "id": "lk-360875",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[삼성물산 리조트부문] 에버랜드 마케터스 10기 모집",
+      "host": "삼성물산(주)",
+      "start": "2026-10-30",
+      "end": "2026-11-15",
+      "url": "https://linkareer.com/activity/360875",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-02"
+    },
+    {
+      "id": "lk-361193",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "면접왕이형과 함께하는 2026 청년도약 인재양성 부트캠프 (반도체 산업)",
+      "host": "주식회사 얼라이브커뮤니티",
+      "start": "2026-11-01",
+      "end": "2026-11-09",
+      "url": "https://linkareer.com/activity/361193",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-02"
+    },
+    {
+      "id": "lk-361151",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "\"우리 동네를 바꿀 수 있을까?\" 광명 청년들의 [로컬 액션 커뮤니티]",
+      "host": "청춘곳간",
+      "start": "2026-11-01",
+      "end": "2026-11-06",
+      "url": "https://linkareer.com/activity/361151",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-02"
+    },
+    {
+      "id": "lk-360963",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제 1회 하나증권 청년 금융아이디어 공모전",
+      "host": "하나증권",
+      "start": "2026-11-02",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/360963",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-02"
+    },
+    {
+      "id": "lk-361174",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제47회 《문명 그 화려한 역설》 69개의 표지비밀 풀기 프로젝트 공모 (1억고료 문학상 수상작)",
+      "host": "도서출판 글여울",
+      "start": "2026-11-01",
+      "end": "2026-12-31",
+      "url": "https://linkareer.com/activity/361174",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-02"
     }
   ],
   "certs": [
