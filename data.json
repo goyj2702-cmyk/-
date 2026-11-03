@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-02T06:48+09:00",
-    "itemCount": 209,
+    "updatedAt": "2026-11-03T09:41+09:00",
+    "itemCount": 220,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 58
+        "count": 60
       }
     }
   },
@@ -1128,10 +1128,10 @@
       "cat": "대외활동",
       "kind": "apply",
       "isBio": false,
-      "title": "[D.A.B] AI 미래배터리 캠퍼스 1기",
+      "title": "[D.A.B] AI 미래배터리 캠퍼스",
       "host": "KG ICT",
       "start": "2026-10-14",
-      "end": "2026-11-01",
+      "end": "2026-11-15",
       "url": "https://linkareer.com/activity/356459",
       "trust": "verified",
       "grades": [
@@ -4898,7 +4898,7 @@
       "title": "[에듀콘] 해외 비즈니스 외국어 과정 겨울기수 교육생 모집 시작 (~11.8)",
       "host": "(재)건설산업교육원",
       "start": "2026-09-21",
-      "end": "2026-10-25",
+      "end": "2026-11-08",
       "url": "https://linkareer.com/activity/351897",
       "trust": "verified",
       "grades": [
@@ -5027,6 +5027,263 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-02"
+    },
+    {
+      "id": "lk-361212",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[올리브영] 공식 크리에이터 셔터브리티 8기 모집",
+      "host": "CJ올리브영",
+      "start": "2026-10-26",
+      "end": "2026-11-15",
+      "url": "https://linkareer.com/activity/361212",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-361501",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[사단법인 K컬쳐교육중앙회] K컬쳐 운영·기획단 1차 모집 (~11/4)",
+      "host": "사단법인 K컬쳐교육중앙회",
+      "start": "2026-11-02",
+      "end": "2026-11-04",
+      "url": "https://linkareer.com/activity/361501",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-361489",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 신나는 김장투어",
+      "host": "동원F&B",
+      "start": "2026-11-02",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/361489",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-361488",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2027 키자니아 온라인 서포터즈 모집",
+      "host": "키자니아",
+      "start": "2026-11-02",
+      "end": "2026-11-15",
+      "url": "https://linkareer.com/activity/361488",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-359946",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제6회 인천공항 여행 공모전 「내가 만드는 한국여행」",
+      "host": "인천국제공항공사",
+      "start": "2026-10-26",
+      "end": "2026-11-29",
+      "url": "https://linkareer.com/activity/359946",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-361503",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "극단벼루 창작극 [사로] 배우 모집",
+      "host": "극단벼루",
+      "start": "2026-11-02",
+      "end": "2026-11-08",
+      "url": "https://linkareer.com/activity/361503",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-361500",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제1회 도봉 민간기록물 수집 공모전",
+      "host": "도봉문화원",
+      "start": "2026-11-02",
+      "end": "2026-12-03",
+      "url": "https://linkareer.com/activity/361500",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-361498",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "「여수! 낭만의 길에 서다, 여행 코스 공모전」시행 연장 공고",
+      "host": "여수시청",
+      "start": "2026-11-02",
+      "end": "2026-11-16",
+      "url": "https://linkareer.com/activity/361498",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-361497",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "밀양 매운맛 쇼츠 공모전",
+      "host": "밀양시",
+      "start": "2026-11-02",
+      "end": "2026-11-15",
+      "url": "https://linkareer.com/activity/361497",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-361496",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 쇼츠 영상 공모전 <중구 좋다 아이가~, 중구 숨은 매력 온(on)나> ​",
+      "host": "대구광역시 중구청",
+      "start": "2026-11-02",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/361496",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-361495",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년도 사회적가치형 청년 일경험 지원사업 우수사례 수기 공모전",
+      "host": "한국사회적기업진흥원",
+      "start": "2026-11-02",
+      "end": "2026-11-06",
+      "url": "https://linkareer.com/activity/361495",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-03"
     }
   ],
   "certs": [
