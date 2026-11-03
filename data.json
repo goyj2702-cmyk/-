@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-03T09:41+09:00",
-    "itemCount": 220,
+    "updatedAt": "2026-11-04T07:59+09:00",
+    "itemCount": 232,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -5284,6 +5284,304 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-11-03"
+    },
+    {
+      "id": "lk-359629",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "Adobe 학생 앰배서더 모집｜CC Pro Plus로 만드는 나만의 캠퍼스 콘텐츠",
+      "host": "주식회사 에쓰씨케이",
+      "start": "2026-10-26",
+      "end": "2026-11-13",
+      "url": "https://linkareer.com/activity/359629",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-360120",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[브이티코스메틱] 2026년 VT CREW : Short-sume 서포터즈 3기 모집",
+      "host": "주식회사 브이티코스메틱",
+      "start": "2026-10-28",
+      "end": "2026-11-12",
+      "url": "https://linkareer.com/activity/360120",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361855",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "FINGOO에서 미래전략 담당 창업멤버를 모집합니다.",
+      "host": "핀구(FINGOO)",
+      "start": "2026-11-03",
+      "end": "2027-02-01",
+      "url": "https://linkareer.com/activity/361855",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "venture"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361834",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[진로수업 멘토링] 청소년 디지털·진로교육 대학생 멘토 모집",
+      "host": "주식회사 어썸스쿨",
+      "start": "2026-11-03",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/361834",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361831",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "국회의원 주진우 청년 명예보좌관 4기 모집",
+      "host": "국회의원 주진우 의원실",
+      "start": "2026-11-03",
+      "end": "2026-12-13",
+      "url": "https://linkareer.com/activity/361831",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361801",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[산림청] 산림공공데이터 어디까지 써봤니 활용사례 공모",
+      "host": "산림청",
+      "start": "2026-11-02",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/361801",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361795",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "「전북에 빠졌쏭」 AI 뮤직쇼츠 공모전",
+      "host": "전북 AI디지털배움터",
+      "start": "2026-11-02",
+      "end": "2026-11-19",
+      "url": "https://linkareer.com/activity/361795",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361782",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 대한민국 국제음악콩쿠르",
+      "host": "(사)한국음악협회",
+      "start": "2026-11-02",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/361782",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361774",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 PAC 공모전",
+      "host": "숙명여자대학교 홍보광고학과",
+      "start": "2026-10-30",
+      "end": "2026-11-18",
+      "url": "https://linkareer.com/activity/361774",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361730",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "부산 동구 AI 숏폼 영상 공모전",
+      "host": "부산동구청",
+      "start": "2026-11-03",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/361730",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361690",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제7회 국립대학육성사업 영상콘텐츠 공모전",
+      "host": "국립대학육성사업 발전협의회",
+      "start": "2026-11-02",
+      "end": "2026-12-27",
+      "url": "https://linkareer.com/activity/361690",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-361611",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[한국콘텐츠진흥원] 365 공정상생데이 캘린더 이벤트",
+      "host": "주식회사 라온스",
+      "start": "2026-11-03",
+      "end": "2026-11-13",
+      "url": "https://linkareer.com/activity/361611",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-04"
     }
   ],
   "certs": [
