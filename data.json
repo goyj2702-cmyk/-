@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-04T07:59+09:00",
-    "itemCount": 232,
+    "updatedAt": "2026-11-05T08:20+09:00",
+    "itemCount": 242,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -3157,16 +3157,16 @@
       "firstSeen": "2026-10-24"
     },
     {
-      "id": "lk-359223",
+      "id": "lk-362196",
       "cat": "공모전",
       "kind": "apply",
       "isBio": false,
       "title": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS",
-      "host": "(주)소화소",
-      "start": "2026-10-14",
-      "end": "2026-12-30",
-      "url": "https://linkareer.com/activity/359223",
-      "trust": "caution",
+      "host": "여성신문",
+      "start": "2026-11-04",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/362196",
+      "trust": "verified",
       "grades": [
         "1학년",
         "2학년",
@@ -3175,9 +3175,9 @@
         "휴학생"
       ],
       "tags": [],
-      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "note": "링커리어 공고 원문",
       "source": "linkareer",
-      "firstSeen": "2026-10-24"
+      "firstSeen": "2026-11-05"
     },
     {
       "id": "lk-359216",
@@ -5293,7 +5293,7 @@
       "title": "Adobe 학생 앰배서더 모집｜CC Pro Plus로 만드는 나만의 캠퍼스 콘텐츠",
       "host": "주식회사 에쓰씨케이",
       "start": "2026-10-26",
-      "end": "2026-11-13",
+      "end": "2026-11-06",
       "url": "https://linkareer.com/activity/359629",
       "trust": "caution",
       "grades": [
@@ -5438,8 +5438,8 @@
       "cat": "공모전",
       "kind": "apply",
       "isBio": false,
-      "title": "「전북에 빠졌쏭」 AI 뮤직쇼츠 공모전",
-      "host": "전북 AI디지털배움터",
+      "title": "2026 전북 AI디지털배움터 「전북에 빠졌쏭(song)」 AI 뮤직숏폼 공모전",
+      "host": "(주)케이티씨에스 전북AI디지털배움터",
       "start": "2026-11-02",
       "end": "2026-11-19",
       "url": "https://linkareer.com/activity/361795",
@@ -5452,7 +5452,8 @@
         "휴학생"
       ],
       "tags": [
-        "ai"
+        "ai",
+        "sales"
       ],
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
@@ -5582,6 +5583,245 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-04"
+    },
+    {
+      "id": "lk-347881",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[월 최대 100만원 지원] 온디바이스 AI SW개발 2기 모집 | 마감임박",
+      "host": "대한상공회의소 서울기술교육센터",
+      "start": "2026-09-01",
+      "end": "2026-11-10",
+      "url": "https://linkareer.com/activity/347881",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362204",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "누크 커피 & 이모생각 블로그 체험단",
+      "host": "누크, 이모생각",
+      "start": "2026-11-04",
+      "end": "2027-02-02",
+      "url": "https://linkareer.com/activity/362204",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362202",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "부천시 봉사단원 모집 <12월의 청년 히어로를 찾아라!>",
+      "host": "부천시 청년청소년과",
+      "start": "2026-11-04",
+      "end": "2026-11-16",
+      "url": "https://linkareer.com/activity/362202",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362201",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "청년공론장 광명에서 로컬 액션 커뮤니티",
+      "host": "광명시청춘곳간",
+      "start": "2026-11-04",
+      "end": "2026-11-06",
+      "url": "https://linkareer.com/activity/362201",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362197",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제3회 다대는TV 유튜브 영상 공모전",
+      "host": "다대1동 주민자치위원회",
+      "start": "2026-11-04",
+      "end": "2026-11-08",
+      "url": "https://linkareer.com/activity/362197",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362194",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": true,
+      "title": "비전공자도 완성하는 의료AI 해커톤 ​",
+      "host": "넥스트러너스",
+      "start": "2026-11-04",
+      "end": "2026-11-06",
+      "url": "https://linkareer.com/activity/362194",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362193",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "사장님을 위한 금융 아이디어 공모전",
+      "host": "케이뱅크",
+      "start": "2026-11-04",
+      "end": "2026-11-16",
+      "url": "https://linkareer.com/activity/362193",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362191",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": true,
+      "title": "숏츠로 전하는 환경보건 이야기",
+      "host": "서울시립대학교 환경보건센터",
+      "start": "2026-11-04",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/362191",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362190",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2027 사회정서학습 수업사례 공모전",
+      "host": "유니세프 한국위원회",
+      "start": "2026-11-04",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/362190",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362189",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 AI·디지털 활용 연구·선도학교 우수사례 공모전",
+      "host": "한국교육학술정보원",
+      "start": "2026-11-04",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/362189",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd",
+        "ai"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-05"
     }
   ],
   "certs": [
