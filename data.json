@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-05T08:20+09:00",
-    "itemCount": 242,
+    "updatedAt": "2026-11-06T08:23+09:00",
+    "itemCount": 252,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -5822,6 +5822,247 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-11-05"
+    },
+    {
+      "id": "lk-362579",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년도 원주시의회 행정사무감사 모니터링단 모집",
+      "host": "사회적협동조합 틔움연구소",
+      "start": "2026-11-06",
+      "end": "2026-11-08",
+      "url": "https://linkareer.com/activity/362579",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
+    },
+    {
+      "id": "lk-362572",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 모두의 창업 1기 전국예선 중부권 시민평가단 모집",
+      "host": "2026 모두의 창업 1기 전국 예선 중부권 운영사무국 (주)디포스트",
+      "start": "2026-11-06",
+      "end": "2026-11-11",
+      "url": "https://linkareer.com/activity/362572",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "venture"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
+    },
+    {
+      "id": "lk-362565",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "한국생활건강연구소 공식 서포터즈 한생건즈 4기 모집",
+      "host": "한국생활건강연구소",
+      "start": "2026-11-06",
+      "end": "2026-11-08",
+      "url": "https://linkareer.com/activity/362565",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
+    },
+    {
+      "id": "lk-362577",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "아시아 창업엑스포 FLY ASIA 심벌마크 디자인 공모",
+      "host": "부산기술창업투자",
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "url": "https://linkareer.com/activity/362577",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "venture"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
+    },
+    {
+      "id": "lk-362576",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 청년의 시간(성남 청년 참여 예산제) 참가팀 모집",
+      "host": "성남시청소년청년재단",
+      "start": "2026-11-06",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/362576",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
+    },
+    {
+      "id": "lk-362575",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제3회 퇴근길 나도 작가",
+      "host": "작가다방",
+      "start": "2026-11-16",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/362575",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
+    },
+    {
+      "id": "lk-362574",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "대전지역 대학생과 함께하는 시민체감 교통 아이디어 공모전",
+      "host": "대전교통공사",
+      "start": "2026-11-06",
+      "end": "2026-11-29",
+      "url": "https://linkareer.com/activity/362574",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
+    },
+    {
+      "id": "lk-362573",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 이금기요리대회 크리에이터부",
+      "host": "이금기",
+      "start": "2026-11-06",
+      "end": "2026-11-25",
+      "url": "https://linkareer.com/activity/362573",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
+    },
+    {
+      "id": "lk-362571",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 수기공모전 「Good Job에 쓰는 편지」",
+      "host": "Good Job 자립생활센터",
+      "start": "2026-11-06",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/362571",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
+    },
+    {
+      "id": "lk-362570",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "AI를 활용한 3분 숏츠 챌린지 대회",
+      "host": "대전일자리경제진흥원",
+      "start": "2026-11-06",
+      "end": "2026-11-13",
+      "url": "https://linkareer.com/activity/362570",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-06"
     }
   ],
   "certs": [
