@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-07T07:48+09:00",
-    "itemCount": 263,
+    "updatedAt": "2026-11-08T06:33+09:00",
+    "itemCount": 266,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -6320,6 +6320,77 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-07"
+    },
+    {
+      "id": "lk-362866",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 한국빅데이터학회 추계학술행사 사전등록 및 세부 일정 안내",
+      "host": "한국빅데이터학회, 한국데이터사이언스학회",
+      "start": "2026-11-02",
+      "end": "2026-11-12",
+      "url": "https://linkareer.com/activity/362866",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-08"
+    },
+    {
+      "id": "lk-362864",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[금융권 대외활동] 겨울방학 6기 금융 프로그램",
+      "host": "(주)위플레이위워크",
+      "start": "2026-11-07",
+      "end": "2026-11-23",
+      "url": "https://linkareer.com/activity/362864",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-08"
+    },
+    {
+      "id": "lk-362868",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "토마토들 학생회 아이디어톤",
+      "host": "주식회사 리에이크",
+      "start": "2026-11-06",
+      "end": "2026-11-15",
+      "url": "https://linkareer.com/activity/362868",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-08"
     }
   ],
   "certs": [
