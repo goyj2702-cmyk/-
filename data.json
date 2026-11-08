@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-08T06:33+09:00",
-    "itemCount": 266,
+    "updatedAt": "2026-11-09T06:48+09:00",
+    "itemCount": 270,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 60
+        "count": 58
       }
     }
   },
@@ -6391,6 +6391,102 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-08"
+    },
+    {
+      "id": "lk-362698",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[삼성전자] 갤럭시 대학생 서포터즈 7기 모집",
+      "host": "삼성전자",
+      "start": "2026-11-09",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/362698",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-09"
+    },
+    {
+      "id": "lk-360933",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "레드불 대학생 마케터",
+      "host": "레드불 코리아 유한회사",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/360933",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-09"
+    },
+    {
+      "id": "lk-362883",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": true,
+      "title": "'응급의료 토크콘서트' 서포터즈 모집",
+      "host": "주식회사 리브위드",
+      "start": "2026-11-08",
+      "end": "2026-12-04",
+      "url": "https://linkareer.com/activity/362883",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-09"
+    },
+    {
+      "id": "lk-359011",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제2회 잠실 미디어아트 공모전",
+      "host": "서울시설공단",
+      "start": "2026-10-26",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/359011",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-09"
     }
   ],
   "certs": [
