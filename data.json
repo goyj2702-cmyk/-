@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-10T10:16+09:00",
-    "itemCount": 279,
+    "updatedAt": "2026-11-11T07:57+09:00",
+    "itemCount": 290,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 54
+        "count": 60
       }
     }
   },
@@ -1178,8 +1178,8 @@
       "isBio": false,
       "title": "[아이쿠스] 2026 겨울 유럽드리머즈 모집✈️｜유럽여행·문화교류·해외봉사",
       "host": "아이쿠스",
-      "start": "2026-08-10",
-      "end": "2026-11-08",
+      "start": "2026-11-01",
+      "end": "2027-01-15",
       "url": "https://linkareer.com/activity/341606",
       "trust": "caution",
       "grades": [
@@ -6705,6 +6705,268 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-10"
+    },
+    {
+      "id": "lk-363464",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": true,
+      "title": "[LG사이언스파크] 디스커버리투어_화학/재료/소재 특집 신청자 모집(~11/20 14시)",
+      "host": "LG사이언스파크",
+      "start": "2026-11-11",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/363464",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363454",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[제주 워홀] 12월 BUCKET CREW 모집 | 제주 한 달 살기",
+      "host": "버킷",
+      "start": "2026-11-10",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/363454",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363432",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "맛있는 취미연구소: '겹겹이 초코 찹쌀떡' 만들기!",
+      "host": "서울시립청소년드림센터",
+      "start": "2026-11-10",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/363432",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363324",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "JTI 글로벌 아이디어 공모전",
+      "host": "제이티인터내셔널코리아",
+      "start": "2026-11-02",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/363324",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363478",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026「김천시 삼색이수자율상권 유튜브 공모전」",
+      "host": "삼색이수자율상권상인 협동조합",
+      "start": "2026-11-10",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/363478",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363438",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[이벤트] VLLO 인스타 팔로우하고 프리미엄 1개월권 받아볼텨?!",
+      "host": "인투인미디어",
+      "start": "2026-11-10",
+      "end": "2026-11-29",
+      "url": "https://linkareer.com/activity/363438",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363391",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 핀테크 라이징 스타 챌린지",
+      "host": "전북특별자치도",
+      "start": "2026-10-14",
+      "end": "2026-11-12",
+      "url": "https://linkareer.com/activity/363391",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363389",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 다짐공모전 (뮤지컬 페치카 장부가, 출정가 등 독립군가 부르기 UCC영상공모전)",
+      "host": "K문화독립군",
+      "start": "2026-09-01",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/363389",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363369",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": true,
+      "title": "웅진식품 50주년 기념 문학공모전 「매실과 햇살로 잇-다 : 그 시절, 우리」",
+      "host": "웅진식품",
+      "start": "2026-10-29",
+      "end": "2026-11-15",
+      "url": "https://linkareer.com/activity/363369",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363354",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[SCENE] 2026 SCENE AI·실사 웹드라마 공모전",
+      "host": "SCENE",
+      "start": "2026-11-01",
+      "end": "2026-12-31",
+      "url": "https://linkareer.com/activity/363354",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
+    },
+    {
+      "id": "lk-363346",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 충청남도 교통안전 콘텐츠(포스터 · 숏폼) 공모전",
+      "host": "충청남도자치경찰위원회",
+      "start": "2026-11-11",
+      "end": "2026-12-11",
+      "url": "https://linkareer.com/activity/363346",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-11"
     }
   ],
   "certs": [
