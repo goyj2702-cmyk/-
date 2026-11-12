@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-12T09:11+09:00",
-    "itemCount": 301,
+    "updatedAt": "2026-11-13T08:17+09:00",
+    "itemCount": 311,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -7229,6 +7229,242 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-12"
+    },
+    {
+      "id": "lk-364092",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "애슬러 크리에이티브 크루 1기",
+      "host": "바인드",
+      "start": "2026-11-12",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/364092",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-364074",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[메가스터디교육] 유니스터디 대학생 앰배서더 유니버스 2기 모집",
+      "host": "메가스터디교육(주)",
+      "start": "2026-11-13",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/364074",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-364064",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "부산광역시일시청소년쉼터(고정형) 제19기 아웃리치자원봉사단 모집",
+      "host": "부산광역시일시청소년쉼터(고정형)",
+      "start": "2026-11-12",
+      "end": "2026-12-02",
+      "url": "https://linkareer.com/activity/364064",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-364086",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "토마토들 일본 지역 관광 아이디어톤",
+      "host": "주식회사 리에이크",
+      "start": "2026-11-13",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/364086",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-364057",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "「2026년 벤처브릿지 오픈이노베이션」",
+      "host": "주식회사 알파브라더스",
+      "start": "2026-11-12",
+      "end": "2026-11-23",
+      "url": "https://linkareer.com/activity/364057",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "venture"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-364040",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "쉽고 바른 정보통신기술(ICT) 공공언어 웹툰 공모전",
+      "host": "문화체육관광부 / 동아대학교 국어문화원·정보통신정책연구원",
+      "start": "2026-11-09",
+      "end": "2026-11-29",
+      "url": "https://linkareer.com/activity/364040",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-364019",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "디어비 글로벌 런칭 공모전",
+      "host": "DEARBE Corp.",
+      "start": "2026-11-02",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/364019",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-364015",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "건강보험을 RE:BOOM 하라! 공모전",
+      "host": "국민건강보험",
+      "start": "2026-11-12",
+      "end": "2026-12-04",
+      "url": "https://linkareer.com/activity/364015",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-364010",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제3회 초단편 웹소설 챌린지 퇴근길 나도작가",
+      "host": "작가다방",
+      "start": "2026-11-16",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/364010",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-364007",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제1회 순천시 청년정책 숏폼 공모전",
+      "host": "순천시",
+      "start": "2026-10-28",
+      "end": "2026-11-18",
+      "url": "https://linkareer.com/activity/364007",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-13"
     }
   ],
   "certs": [
