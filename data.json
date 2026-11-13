@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-13T08:17+09:00",
-    "itemCount": 311,
+    "updatedAt": "2026-11-14T08:20+09:00",
+    "itemCount": 322,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 60
+        "count": 58
       }
     }
   },
@@ -7465,6 +7465,263 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "lk-363674",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[타임금융교육원] 금융실무과정 105기 (~11/21 마감)",
+      "host": "타임금융교육원",
+      "start": "2026-11-11",
+      "end": "2026-11-21",
+      "url": "https://linkareer.com/activity/363674",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364400",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "(될)거지 공모전 크루 모집",
+      "host": "(될)거지",
+      "start": "2026-11-13",
+      "end": "2027-02-13",
+      "url": "https://linkareer.com/activity/364400",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364394",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 정부혁신 왕중왕전 국민평가단 모집",
+      "host": "행정안전부",
+      "start": "2026-11-13",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/364394",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-361051",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 대국민 재정교육 아이디어 공모전",
+      "host": "기획예산처",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/361051",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364398",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "하비코 챌린지 휘핑크림 레시피 콘테스트 이벤트",
+      "host": "하비코 챌린지 휘핑크림",
+      "start": "2026-11-13",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/364398",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364396",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[EVNET] 코코볼 삼행시 - 코코아빛 포도, ‘코코볼’을 아시나요?",
+      "host": "한국포도협회",
+      "start": "2026-11-13",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/364396",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364393",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "북오산자이 드포레 건축물 미술작품 공모",
+      "host": "(주)고요갤러리",
+      "start": "2026-11-13",
+      "end": "2026-12-04",
+      "url": "https://linkareer.com/activity/364393",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364390",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 제2회 구리시 정책제안 공모전",
+      "host": "구리시",
+      "start": "2026-11-13",
+      "end": "2026-11-25",
+      "url": "https://linkareer.com/activity/364390",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364389",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제5회 충남전국대학영화제",
+      "host": "사단법인 한국영화인협회 충남지회",
+      "start": "2026-11-13",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/364389",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364388",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026년 11월 KESEL 이퓨쳐 DISCOVERY 영어말하기대회",
+      "host": "한국영어말하기평가연구소 KESEL",
+      "start": "2026-11-13",
+      "end": "2026-11-29",
+      "url": "https://linkareer.com/activity/364388",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364387",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "동화책 원작 뮤지컬 <하트방구> 배우 모집",
+      "host": "인터플롯",
+      "start": "2026-11-13",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/364387",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-14"
     }
   ],
   "certs": [
