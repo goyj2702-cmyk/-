@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-14T08:20+09:00",
-    "itemCount": 322,
+    "updatedAt": "2026-11-15T07:04+09:00",
+    "itemCount": 326,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 58
+        "count": 60
       }
     }
   },
@@ -7722,6 +7722,100 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "lk-364472",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "방배ART유스센터 놀이문화행사 <잔소리OFF, 놀이ON> 자원활동가 모집",
+      "host": "서초구립방배유스센터",
+      "start": "2026-11-14",
+      "end": "2026-11-25",
+      "url": "https://linkareer.com/activity/364472",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-15"
+    },
+    {
+      "id": "lk-364448",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[모집] 시립청소년문화교류센터「2027 시드니 글로벌 인재양성 프로그램」 모집!",
+      "host": "시립청소년문화교류센터",
+      "start": "2026-11-14",
+      "end": "2026-11-30",
+      "url": "https://linkareer.com/activity/364448",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-15"
+    },
+    {
+      "id": "lk-364444",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[모집] 아이들에게 산타가 되어주세요! 「몰래산타」 대학생 봉사자 모집",
+      "host": "대방청소년센터",
+      "start": "2026-11-14",
+      "end": "2026-11-26",
+      "url": "https://linkareer.com/activity/364444",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-15"
+    },
+    {
+      "id": "lk-364458",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 동남권 이노베이션 해커톤 ICT INNOHACK",
+      "host": "주식회사 패스파인더",
+      "start": "2026-11-14",
+      "end": "2026-11-17",
+      "url": "https://linkareer.com/activity/364458",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-15"
     }
   ],
   "certs": [
