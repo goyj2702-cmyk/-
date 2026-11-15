@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-15T07:04+09:00",
-    "itemCount": 326,
+    "updatedAt": "2026-11-16T07:35+09:00",
+    "itemCount": 327,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -7816,6 +7816,31 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-15"
+    },
+    {
+      "id": "lk-364484",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "청년기후정책연구그룹 GBSI 2027년도 신임연구원 선발",
+      "host": "청년기후정책연구그룹 GBSI",
+      "start": "2026-11-01",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/364484",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-16"
     }
   ],
   "certs": [
