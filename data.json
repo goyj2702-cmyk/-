@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-16T07:35+09:00",
-    "itemCount": 327,
+    "updatedAt": "2026-11-17T10:42+09:00",
+    "itemCount": 337,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 60
+        "count": 58
       }
     }
   },
@@ -4895,10 +4895,10 @@
       "cat": "교육",
       "kind": "apply",
       "isBio": false,
-      "title": "[에듀콘] 해외 비즈니스 외국어 과정 겨울기수 교육생 모집 시작 (~11.15)",
+      "title": "[에듀콘] 해외 비즈니스 외국어 과정 겨울기수 교육생 모집 시작 (~11.22)",
       "host": "(재)건설산업교육원",
       "start": "2026-09-21",
-      "end": "2026-11-15",
+      "end": "2026-11-22",
       "url": "https://linkareer.com/activity/351897",
       "trust": "verified",
       "grades": [
@@ -7841,6 +7841,247 @@
       "note": "링커리어 공고 원문",
       "source": "linkareer",
       "firstSeen": "2026-11-16"
+    },
+    {
+      "id": "lk-364949",
+      "cat": "교육",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[교육비 0원/온라인] 여행 콘텐츠 제작부터 실제 판매까지! 투어라이브 크리에이터 스쿨 8기 모집 (~12/6)",
+      "host": "주식회사 투어라이브",
+      "start": "2026-11-17",
+      "end": "2026-12-06",
+      "url": "https://linkareer.com/activity/364949",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-364946",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[블루픽] 콘텐츠 기업 경영관리 실무 일경험 참여자 모집(미래내일 일경험)",
+      "host": "(주)아르케",
+      "start": "2026-11-13",
+      "end": "2026-11-19",
+      "url": "https://linkareer.com/activity/364946",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-364939",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": true,
+      "title": "[비쥬웍스] 의료마케팅 실무 일경험 참여자 모집(미래내일 일경험)",
+      "host": "(주)아르케",
+      "start": "2026-11-12",
+      "end": "2026-11-18",
+      "url": "https://linkareer.com/activity/364939",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-359442",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[총상금 2천만원] 비비드 RE: PLAY 6개 IP로 만드는 AI 영상 공모전",
+      "host": "ARKaiN(아캐인)",
+      "start": "2026-10-30",
+      "end": "2026-12-13",
+      "url": "https://linkareer.com/activity/359442",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-364835",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제7회 함평 실버가요제",
+      "host": "함평군",
+      "start": "2026-11-16",
+      "end": "2026-11-19",
+      "url": "https://linkareer.com/activity/364835",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-364834",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2027 실경역사뮤지컬 '의기 논개' 배우 모집",
+      "host": "실경역사뮤지컬",
+      "start": "2026-11-16",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/364834",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-364832",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제16회 비정규노동 수기공모전",
+      "host": "한국비정규노동센터",
+      "start": "2026-11-16",
+      "end": "2026-11-27",
+      "url": "https://linkareer.com/activity/364832",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-364831",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "TripPups AI Game Hackathon 2026",
+      "host": "Trip-Pups",
+      "start": "2026-11-16",
+      "end": "2026-11-28",
+      "url": "https://linkareer.com/activity/364831",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-364823",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2026 광주음악창작소 「피크뮤직 어워즈 」뮤지션 모집",
+      "host": "(재)광주정보문화산업진흥원장",
+      "start": "2026-11-16",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/364823",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-364821",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "SINE WAVE 여성 트로트 가수 공개 모집",
+      "host": "SINE WAVE Entertainment 스튜디오사인",
+      "start": "2026-11-16",
+      "end": "2026-12-31",
+      "url": "https://linkareer.com/activity/364821",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-17"
     }
   ],
   "certs": [
