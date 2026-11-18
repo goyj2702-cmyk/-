@@ -1,470 +1,600 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-bio-spec AI 비서 — 데이터 갱신 스크립트
+update_data.py  —  공고 자동 수집 · 정규화 · 생명/보건 분류 · 병합 (파이썬 기본 라이브러리만 사용)
 
-curated.json(사람이 검증한 데이터) + 크롤링 결과를 병합해
-data.json 을 만든다. GitHub Actions에서 매일 새벽 실행된다.
+실행 흐름
+  1) curated.json(사람이 검수한 공고/자격증/일정)을 읽는다
+  2) 여러 사이트(링커리어/씽유/캠퍼스픽/위비티)를 '사이트별로 독립 실행' (한 곳이 죽어도 나머지는 계속)
+  3) 사이트마다 다른 데이터를 normalize()로 '같은 모양의 공고 객체'로 통일
+  4) bio_classify()로 생명/보건 계열 여부를 엄격하게 판정 (다중 키워드 가중치)
+  5) 병합(curated > 크롤링) → 제목 중복 제거 → NEW 표시용 firstSeen 기록 → data.json 저장
 
-  python update_data.py            # 크롤링 + 병합
-  python update_data.py --offline  # 네트워크 없이 병합만 (로컬 테스트용)
-
-설계 원칙
-- 표준 라이브러리만 사용 (pip 설치 불필요)
-- robots.txt를 확인하고 허용된 경로만, 요청 사이 지연을 두고 정중하게 수집
-- 크롤링이 실패해도 사이트가 비지 않도록: curated + 직전 data.json의 유효 항목을 유지
-- 사람이 검증한 curated 항목이 크롤링 항목보다 항상 우선 (같은 URL이면 curated 사용)
+★ 키워드를 고치고 싶다면 아래 [A. 키워드 설정] 구역만 수정하세요. 다른 곳은 건드릴 필요 없습니다.
 """
-
-from __future__ import annotations
-
-import argparse
-import html
+import hashlib
 import json
 import re
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import urllib.robotparser
 from datetime import date, datetime, timedelta, timezone
+from html import unescape
 from pathlib import Path
-from urllib.parse import urljoin
 
-ROOT = Path(__file__).resolve().parent  # 모든 파일이 한 폴더(저장소 루트)에 있는 구조
+ROOT = Path(__file__).resolve().parent
 CURATED = ROOT / "curated.json"
 OUTPUT = ROOT / "data.json"
 
 KST = timezone(timedelta(hours=9))
-UA = "bio-spec-curation-bot/1.0 (+https://github.com/; daily, polite)"
-REQUEST_DELAY_SEC = 1.5
-MAX_DETAIL_PAGES = 60          # 한 번 실행에 방문할 상세 페이지 상한
-KEEP_CLOSED_DAYS = 30          # 마감 후 며칠까지 '마감' 상태로 보여줄지
-ALL_GRADES = ["1학년", "2학년", "3학년", "4학년", "휴학생"]
+TODAY = datetime.now(KST).date()
 
-# ------------------------------------------------------------------ #
-#  분류 규칙
-# ------------------------------------------------------------------ #
+UA = "Mozilla/5.0 (compatible; BioSpecCurationBot/1.0; personal non-commercial project)"
+REQUEST_DELAY = 1.5        # 요청 사이 대기(초) — 사이트에 부담을 주지 않기 위함
+TIMEOUT = 20               # 요청 한 번당 최대 대기(초)
+MAX_LIST_LINKS = 30        # 사이트·목록 1개당 읽을 최대 공고 수
+MAX_DETAIL_PAGES = 40      # 사이트 1개당 상세페이지 최대 방문 수
+KEEP_CLOSED_DAYS = 30      # 마감 후 이 기간이 지난 크롤링 공고는 삭제
+CARRY_OVER_DAYS = 7        # 사이트 수집이 통째로 실패하면, 지난 데이터를 이 기간까지 유지
+NEW_DAYS = 3               # (프론트와 동일) 처음 발견 후 3일간 NEW
+GRADES_ALL = [1, 2, 3, 4, "휴학"]   # 크롤링 공고의 기본 대상 학년. 프론트의 학년 값 형식에 맞추세요.
 
-BIO_KEYWORDS = ["바이오", "생명", "제약", "의약", "신약", "헬스", "의료", "보건", "임상", "GMP",
-                "유전", "세포", "미생물", "식품", "화학", "생물", "백신", "진단"]
-EXCLUDE_KEYWORDS = ["토익", "TOEIC", "토스", "오픽", "어린이", "초등", "유아", "중학생", "고등학생 대상"]
-EDU_KEYWORDS = ["교육", "과정", "아카데미", "부트캠프", "양성", "캠프", "스쿨", "특강"]
-JOB_KEYWORDS = ["채용", "신입사원", "공개채용", "경력사원"]
-STUDENT_TARGET_HINTS = ["대학", "누구나", "제한없음", "제한 없음", "일반", "청년", "국민"]
+# ═══════════════════════════════════════════════════════════════════════
+# [A. 키워드 설정]  ← 여기만 고치면 됩니다. 한글은 부분일치, 영문은 단어 단위로 일치합니다.
+# ═══════════════════════════════════════════════════════════════════════
 
+# (1) 강한 키워드: 이 단어가 '제목 또는 해시태그'에 있어야 생명/보건 계열로 인정됩니다.
+#     "이 단어가 보이면 거의 확실히 생명/보건 분야"인 것만 넣으세요.
+STRONG_KEYWORDS = [
+    # 생명·바이오
+    "바이오", "의생명", "생명과학", "생명공학", "생물학", "분자생물", "합성생물", "미생물",
+    "유전자", "유전체", "게놈", "크리스퍼", "광유전학", "뇌과학", "신경과학", "줄기세포",
+    "세포치료", "오가노이드", "단백질", "항체", "백신", "감염병",
+    "re:생태(?!계)",   # "생태조사/생태학"은 인정, "○○ 생태계"는 제외 (정규식은 앞에 re: 를 붙입니다)
+    # 제약·의료
+    "제약", "신약", "의약", "약학", "의료기기", "의공학", "진단키트", "임상", "식약처", "GMP",
+    # 보건·헬스케어
+    "보건", "헬스케어", "디지털헬스", "공중보건",
+    # 영문 (대소문자 무시, 단어 단위)
+    "bio", "biotech", "biohealth", "bioinformatics", "pharma", "pharmaceutical",
+    "healthcare", "genome", "crispr", "clinical", "neuroscience",
+]
+
+# (2) 약한 키워드: 혼자서는 절대 통과하지 못하고, 강한 키워드를 '보조'할 때만 점수에 더해집니다.
+WEAK_KEYWORDS = [
+    "생명", "생태계", "의료", "의학", "건강", "질병", "치료", "환자", "진단", "병원",
+    "연구소", "실험", "화학", "식품", "동물", "환경",
+]
+
+# (3) 오탐 방지 문구: 아래 문구는 검사 전에 지워버립니다. (예: '생명보험'의 '생명', 'IT 생태계'의 '생태')
+MASK_PHRASES = [
+    r"[가-힣A-Za-z]{0,4}생명(?:보험|화재|금융|보험사)", r"(?:삼성|한화|교보|신한|농협|흥국|동양|ABL|DB|KDB|푸본현대)생명",
+    r"생명(?:줄|선)", r"생명\s*존중\s*(?:캠페인|문화)",
+    r"(?:스타트업|창업|산업|혁신|플랫폼|디지털|콘텐츠|문화|지역|AI|IT|게임|웹툰|브랜드|상권|벤처|투자|금융)\s*생태계",
+    r"생태\s*계\s*(?:조성|구축|활성화)",
+]
+
+# (4) 점수 규칙 — 필드별 배율 × 키워드 가중치
+WEIGHT_STRONG = 3.0
+WEIGHT_WEAK = 1.0
+FIELD_MULT = {"title": 2.0, "tags": 2.0, "host": 1.5, "body": 0.5}
+PASS_SCORE = 6.0          # 이 점수 이상이어야 통과
+# 주최기관(host)이 바이오/제약 기업·기관이라서 통과시키고 싶을 때: host에 강한 키워드 + 제목에 아래 직무 단어
+HOST_ASSIST_TITLE_WORDS = ["연구", "R&D", "품질", "생산", "임상", "개발", "QA", "QC", "RA", "MR", "공정", "분석", "실험"]
+
+# (5) 분야 태그(rnd/gmp/venture/ai/sales) 추정 규칙 — 생명/보건 공고에만 붙습니다.
 TAG_RULES = {
-    "rnd": ["연구", "R&D", "신약", "실험", "논문", "과학"],
-    "gmp": ["GMP", "품질", "생산", "공정", "안전", "제조"],
-    "venture": ["창업", "스타트업", "사업화", "벤처"],
-    "ai": ["AI", "인공지능", "데이터", "빅데이터", "디지털", "해커톤"],
-    "sales": ["마케팅", "홍보", "서포터즈", "광고", "콘텐츠", "영상", "숏폼", "브랜드"],
+    "rnd":     ["연구", "R&D", "실험", "논문", "학술", "신약", "임상", "연구원"],
+    "gmp":     ["GMP", "품질", "QA", "QC", "생산", "제조", "공정", "바이오공정"],
+    "venture": ["창업", "스타트업", "벤처", "사업화", "IR", "아이디어", "엑셀러레이터"],
+    "ai":      ["AI", "인공지능", "빅데이터", "딥러닝", "머신러닝", "디지털헬스", "데이터"],
+    "sales":   ["영업", "마케팅", "MR", "마케터", "세일즈"],
 }
 
-# 주최처가 이 패턴에 맞으면 ✅ 공신력 인증, 아니면 ⚠️ 주의/비공식
+# (6) 목록에서 제외할 공고(어학시험 등)
+EXCLUDE_TITLE = re.compile(r"토익|TOEIC|토플|TOEFL|오픽|OPIc|텝스|TEPS", re.I)
+
+# (7) 믿을 수 있는 주최기관(공신력 뱃지 ✅)
 TRUSTED_HOST = re.compile(
-    r"(부|처|청|원|공단|공사|진흥원|재단|협회|학회|위원회|대학교|연구원|공제회|은행|그룹|"
-    r"삼성|LG|SK|현대|롯데|CJ|한화|포스코|GS|KT|KG|네이버|카카오|넷마블|효성|DB|"
-    r"뉴스|일보|신문|방송|TV|복지재단|굿네이버스|월드비전|적십자)"
+    r"(부|처|청|원|공단|공사|진흥원|연구원|연구소|재단|협회|학회|위원회|센터|대학교?|KT|KG|LG|SK|삼성|현대|한미|유한|대웅|"
+    r"종근당|녹십자|셀트리온|바이오로직스|뉴스|일보|신문|방송|TV|복지재단|굿네이버스|월드비전|적십자)"
 )
-# 지자체: '양양군', '서울시', '양천구', '강원특별자치도'처럼 시·군·구·도로 끝나는 기관명
 LOCAL_GOV = re.compile(r"(특별자치도|특별자치시|특별시|광역시|[가-힣]{1,5}(시|군|구|도))$")
 
 
-def classify(title: str, host: str, path_kind: str) -> dict:
-    text = f"{title} {host}"
-    if any(k in text for k in JOB_KEYWORDS):
-        cat = "채용"
-    elif any(k in title for k in EDU_KEYWORDS):
-        cat = "교육"
-    else:
-        cat = "공모전" if path_kind == "contest" else "대외활동"
-    tags = [tag for tag, kws in TAG_RULES.items() if any(k in text for k in kws)]
-    return {
-        "cat": cat,
-        "isBio": any(k in text for k in BIO_KEYWORDS),
-        "tags": tags,
-        "trust": "verified" if host and (TRUSTED_HOST.search(host) or LOCAL_GOV.search(host.strip())) else "caution",
-    }
-
-
-# ------------------------------------------------------------------ #
-#  HTTP 유틸
-# ------------------------------------------------------------------ #
-
-_robots_cache: dict[str, urllib.robotparser.RobotFileParser] = {}
-
-
-def allowed(url: str) -> bool:
-    base = re.match(r"https?://[^/]+", url).group(0)
-    if base not in _robots_cache:
-        rp = urllib.robotparser.RobotFileParser(base + "/robots.txt")
-        try:
-            rp.read()
-        except Exception:
-            rp = None  # robots.txt를 못 읽으면 보수적으로 차단
-        _robots_cache[base] = rp
-    rp = _robots_cache[base]
-    return bool(rp and rp.can_fetch(UA, url))
-
-
-def get(url: str) -> str:
-    if not allowed(url):
-        raise PermissionError(f"robots.txt disallows {url}")
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "ko-KR,ko"})
-    with urllib.request.urlopen(req, timeout=20) as res:
-        charset = res.headers.get_content_charset() or "utf-8"
-        body = res.read().decode(charset, errors="replace")
-    time.sleep(REQUEST_DELAY_SEC)
-    return body
-
-
-def html_to_text(raw: str) -> str:
-    raw = re.sub(r"(?is)<(script|style).*?</\1>", " ", raw)
-    raw = re.sub(r"(?i)<br\s*/?>|</(p|div|li|tr|dd|dt|h\d)>", "\n", raw)
-    text = html.unescape(re.sub(r"<[^>]+>", " ", raw))
-    return re.sub(r"[ \t ]+", " ", text)
-
-
-# ------------------------------------------------------------------ #
-#  소스 1: 씽유 (thinkyou.co.kr) 공모전·대외활동
-#  - 목록: 메인 페이지에서 /contest/{id}, /extAct/{id} 링크 수집
-#  - 상세: 텍스트에서 '주최', '접수기간 YYYY-MM-DD ~ YYYY-MM-DD', '응모대상'을 정규식으로 추출
-#  ※ 사이트 구조가 바뀌면 이 함수의 정규식만 고치면 됩니다.
-# ------------------------------------------------------------------ #
-
-THINKYOU = "https://thinkyou.co.kr/"
-RE_LINK = re.compile(r'href="(/(contest|extAct)/(\d+)/?)"')
-RE_PERIOD = re.compile(r"접수기간\s*:?\s*(\d{4}-\d{2}-\d{2})\s*~\s*(\d{4}-\d{2}-\d{2})")
-RE_HOST = re.compile(r"주최\s*:?\s*\n?\s*([^\n]{2,60})")
-RE_TARGET = re.compile(r"응모대상\s*:?\s*\n?\s*([^\n]{2,80})")
-RE_TITLE = re.compile(r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"', re.I)
-
-
-def scrape_thinkyou(log: list) -> list[dict]:
-    listing = get(THINKYOU)
-    seen, links = set(), []
-    for href, kind, num in RE_LINK.findall(listing):
-        if num not in seen:
-            seen.add(num)
-            links.append((urljoin(THINKYOU, href), kind, num))
-    log.append(f"thinkyou: {len(links)} links found")
-
-    items = []
-    for url, kind, num in links[:MAX_DETAIL_PAGES]:
-        try:
-            raw = get(url)
-        except Exception as e:  # 개별 실패는 건너뜀
-            log.append(f"thinkyou: skip {url} ({e})")
-            continue
-        text = html_to_text(raw)
-        period = RE_PERIOD.search(text)
-        if not period:
-            continue
-        m_title = RE_TITLE.search(raw)
-        title = html.unescape(m_title.group(1)).split("|")[0].strip() if m_title else ""
-        host = (RE_HOST.search(text).group(1).strip() if RE_HOST.search(text) else "")
-        target = (RE_TARGET.search(text).group(1) if RE_TARGET.search(text) else "")
-        if not title or any(k in title for k in EXCLUDE_KEYWORDS):
-            continue
-        if target and not any(h in target for h in STUDENT_TARGET_HINTS):
-            continue  # 대학생이 참여할 수 없는 공고 제외
-        c = classify(title, host, kind)
-        items.append({
-            "id": f"ty-{kind}-{num}",
-            "cat": c["cat"],
-            "kind": "apply",
-            "isBio": c["isBio"],
-            "title": title,
-            "host": host or "주최 정보 없음",
-            "start": period.group(1),
-            "end": period.group(2),
-            "url": url,
-            "trust": c["trust"] if host else "caution",
-            "grades": ALL_GRADES,
-            "tags": c["tags"],
-            "note": "씽유 공고 원문" + ("" if c["trust"] == "verified" else " · 주최 규모를 확인하세요"),
-            "source": "thinkyou",
-        })
-    log.append(f"thinkyou: {len(items)} items parsed")
-    return items
-
-
-# ------------------------------------------------------------------ #
-#  소스 2: 링커리어 (linkareer.com) 대외활동·공모전
-#  - 목록: /list/activity, /list/contest 첫 페이지(최신순)에서 /activity/{id} 링크 수집
-#  - 상세: ① 페이지에 내장된 Next.js 데이터(__NEXT_DATA__)에서 제목·기관·모집기간을 찾고
-#          ② 없으면 화면 텍스트('시작일2026.10.13 / 마감일2026.11.12')를 정규식으로 읽음
-#  ※ 제목·주최·기간·원문 링크만 저장하고 본문은 복제하지 않음
-# ------------------------------------------------------------------ #
-
-LINKAREER = "https://linkareer.com"
-LINKAREER_LISTS = [("/list/activity", "extAct"), ("/list/contest", "contest")]
-LINKAREER_MAX_PER_LIST = 30
-RE_LK_LINK = re.compile(r'href="/activity/(\d+)"')
-RE_LK_START = re.compile(r"시작일\s*(\d{4})[.\-](\d{1,2})[.\-](\d{1,2})")
-RE_LK_END = re.compile(r"마감일\s*(\d{4})[.\-](\d{1,2})[.\-](\d{1,2})")
-RE_LK_TARGET = re.compile(r"참여대상\s*\n?\s*([^\n]{2,80})")
-RE_NEXT_DATA = re.compile(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
-
-
-def _to_iso(v) -> str | None:
-    """링커리어 날짜 값(epoch ms/s, ISO 문자열, 2026.10.13)을 YYYY-MM-DD로."""
-    if v is None or v == "":
-        return None
-    if isinstance(v, (int, float)):
-        ts = v / 1000 if v > 1e11 else v
-        return datetime.fromtimestamp(ts, KST).date().isoformat()
-    m = re.match(r"(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})", str(v))
-    return f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}" if m else None
-
-
-def _find_activity(node, activity_id: str):
-    """__NEXT_DATA__ JSON 안에서 이 공고(제목 + 모집기간 필드를 가진 객체)를 찾는다."""
-    stack = [node]
-    while stack:
-        cur = stack.pop()
-        if isinstance(cur, dict):
-            keys = cur.keys()
-            if "title" in keys and ("recruitCloseAt" in keys or "recruitStartAt" in keys):
-                if str(cur.get("id", activity_id)) == activity_id:
-                    return cur
-            stack.extend(cur.values())
-        elif isinstance(cur, list):
-            stack.extend(cur)
-    return None
-
-
-def _org_name(act: dict) -> str:
-    for key in ("organizationName", "orgName", "companyName", "hostName"):
-        if isinstance(act.get(key), str) and act[key].strip():
-            return act[key].strip()
-    org = act.get("organization") or act.get("company") or {}
-    if isinstance(org, dict):
-        for key in ("name", "title", "organizationName"):
-            if isinstance(org.get(key), str) and org[key].strip():
-                return org[key].strip()
-    return ""
-
-
-def parse_linkareer_detail(raw: str, activity_id: str) -> dict | None:
-    """상세 페이지 HTML → {title, host, start, end, target}. 필수값이 없으면 None."""
-    title = host = start = end = ""
-    m = RE_NEXT_DATA.search(raw)
-    if m:
-        try:
-            act = _find_activity(json.loads(m.group(1)), activity_id)
-        except json.JSONDecodeError:
-            act = None
-        if act:
-            title = (act.get("title") or "").strip()
-            host = _org_name(act)
-            start = _to_iso(act.get("recruitStartAt")) or ""
-            end = _to_iso(act.get("recruitCloseAt")) or ""
-
-    text = html_to_text(raw)
-    if not title:
-        m_title = RE_TITLE.search(raw)
-        title = html.unescape(m_title.group(1)).split("|")[0].strip() if m_title else ""
-        title = re.sub(r"\s*-\s*링커리어.*$", "", title)
-    if not (start and end):
-        s, e = RE_LK_START.search(text), RE_LK_END.search(text)
-        if s and e:
-            start = f"{s.group(1)}-{int(s.group(2)):02d}-{int(s.group(3)):02d}"
-            end = f"{e.group(1)}-{int(e.group(2)):02d}-{int(e.group(3)):02d}"
-    if not host:
-        # 화면에서 제목 바로 다음 줄이 기관명 (예: "...모집\n2026 바이오미래포럼\n기업형태")
-        m_host = re.search(re.escape(title) + r"\s*\n\s*([^\n]{2,60})\s*\n\s*(기업형태|주최)", text) if title else None
-        host = m_host.group(1).strip() if m_host else ""
-    target_m = RE_LK_TARGET.search(text)
-    if not (title and start and end):
-        return None
-    return {"title": html.unescape(title), "host": html.unescape(host), "start": start, "end": end,
-            "target": target_m.group(1).strip() if target_m else ""}
-
-
-def scrape_linkareer(log: list) -> list[dict]:
-    links: list[tuple[str, str]] = []
-    seen: set[str] = set()
-    for path, kind in LINKAREER_LISTS:
-        listing = get(LINKAREER + path)
-        found = [n for n in RE_LK_LINK.findall(listing) if n not in seen]
-        for n in found[:LINKAREER_MAX_PER_LIST]:
-            seen.add(n)
-            links.append((n, kind))
-        log.append(f"linkareer{path}: {len(found)} links found")
-
-    items = []
-    for num, kind in links:
-        url = f"{LINKAREER}/activity/{num}"
-        try:
-            parsed = parse_linkareer_detail(get(url), num)
-        except Exception as e:
-            log.append(f"linkareer: skip {url} ({e})")
-            continue
-        if not parsed:
-            continue
-        title, host, target = parsed["title"], parsed["host"], parsed["target"]
-        if any(k in title for k in EXCLUDE_KEYWORDS):
-            continue
-        if target and not any(h in target for h in STUDENT_TARGET_HINTS + ["대상 제한 없음"]):
-            continue
-        c = classify(title, host, kind)
-        items.append({
-            "id": f"lk-{num}",
-            "cat": c["cat"],
-            "kind": "apply",
-            "isBio": c["isBio"],
-            "title": title,
-            "host": host or "주최 정보 없음",
-            "start": parsed["start"],
-            "end": parsed["end"],
-            "url": url,
-            "trust": c["trust"] if host else "caution",
-            "grades": ALL_GRADES,
-            "tags": c["tags"],
-            "note": "링커리어 공고 원문" + ("" if c["trust"] == "verified" and host else " · 주최 규모를 확인하세요"),
-            "source": "linkareer",
-        })
-    log.append(f"linkareer: {len(items)} items parsed")
-    return items
-
-
-# 새 소스를 추가하려면: 함수를 만들고 SCRAPERS에 등록하세요.
-# 각 함수는 위 스키마의 dict 리스트를 돌려주면 됩니다.
-SCRAPERS = {"thinkyou": scrape_thinkyou, "linkareer": scrape_linkareer}
-
-
-# ------------------------------------------------------------------ #
-#  병합
-# ------------------------------------------------------------------ #
-
-def load_json(path: Path, default):
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except (FileNotFoundError, json.JSONDecodeError):
-        return default
-
-
-def is_stale(item: dict, today: date) -> bool:
-    if item.get("always") or not item.get("end"):
-        return False
-    try:
-        end = date.fromisoformat(item["end"])
-    except ValueError:
-        return True
-    return end < today - timedelta(days=KEEP_CLOSED_DAYS)
-
-
-def merge(curated: dict, scraped: list[dict], previous: dict, today: date) -> list[dict]:
-    by_url: dict[str, dict] = {}
-    # 1) 직전 실행의 크롤링 항목 (오늘 크롤링이 실패해도 유지)
-    for it in previous.get("items", []):
-        if it.get("source") not in (None, "curated"):
-            by_url[it["url"]] = it
-    # 2) 오늘 크롤링 결과로 덮어쓰기
-    for it in scraped:
-        by_url[it["url"]] = it
-    # 3) 사람이 검증한 curated가 최우선
-    curated_items = curated.get("items", [])
-    curated_urls_ids = {(it["url"], it["id"]) for it in curated_items}
-    curated_urls = {u for u, _ in curated_urls_ids}
-    merged = list(curated_items) + [it for u, it in by_url.items() if u not in curated_urls]
-    # curated는 날짜가 지나도 남김(캘린더·이력용), 크롤링 항목만 오래된 것 정리
-    kept = [it for it in merged if it.get("source") == "curated" or not is_stale(it, today)]
-    return stamp_first_seen(dedupe_by_title(kept), previous, today)
-
-
-def _norm_title(t: str) -> str:
-    """'[양양군] 2026 양양군 영상 공모전 (~11/12)' → '2026양양군영상공모전' 처럼 비교용으로 정리."""
-    t = re.sub(r"\[[^\]]*\]|\([^)]*\)|<[^>]*>", "", t or "")
-    return re.sub(r"[^0-9A-Za-z가-힣]", "", t).lower()
-
-
-def dedupe_by_title(items: list[dict]) -> list[dict]:
-    """
-    씽유·링커리어에 같은 공고가 함께 올라온 경우 하나만 남긴다.
-    우선순위: curated(사람 검증) > ✅ 공신력 인증 > 먼저 들어온 순서
-    """
-    rank = lambda it: (it.get("source") != "curated", it.get("trust") != "verified")
-    best: dict[str, dict] = {}
-    order: list[str] = []
-    for it in items:
-        key = _norm_title(it.get("title", "")) or it.get("id")
-        if key not in best:
-            best[key] = it
-            order.append(key)
-        elif rank(it) < rank(best[key]):
-            best[key] = it
-    return [best[k] for k in order]
-
-
-def stamp_first_seen(items: list[dict], previous: dict, today: date) -> list[dict]:
-    """
-    'NEW' 뱃지용: 각 공고가 data.json에 처음 들어온 날짜(firstSeen)를 기록한다.
-    - 직전 data.json에 같은 id가 있으면 그 firstSeen을 그대로 이어받음
-    - 직전 파일에 firstSeen이 없던 시절의 항목(최초 도입 시)은 접수 시작일과
-      직전 갱신일 중 이른 날짜로 채워, 기존 공고가 한꺼번에 NEW로 뜨지 않게 함
-    - 처음 보는 id는 오늘 날짜
-    """
-    prev_items = {it.get("id"): it for it in previous.get("items", [])}
-    prev_updated = (previous.get("meta", {}).get("updatedAt") or "")[:10]
-    out = []
-    for it in items:
-        it = dict(it)
-        before = prev_items.get(it.get("id"))
-        if before and before.get("firstSeen"):
-            it["firstSeen"] = before["firstSeen"]
-        elif before:
-            candidates = [d for d in (it.get("start"), prev_updated) if d]
-            it["firstSeen"] = min(candidates) if candidates else today.isoformat()
+# ═══════════════════════════════════════════════════════════════════════
+# [B. 생명/보건 분류기]  — 다중 키워드 가중치 + AND 조건
+# ═══════════════════════════════════════════════════════════════════════
+def _compile_kw(words):
+    """"re:" 로 시작하면 정규식. 한글 포함 단어는 부분일치, 순수 영문은 '앞뒤가 영문이 아닐 때만' 일치(예: bio ≠ biography)."""
+    pats = {}
+    for w in words:
+        if w.startswith("re:"):                       # 정규식 직접 지정
+            pats[w] = re.compile(w[3:], re.I)
+        elif re.search(r"[A-Za-z]", w) and not re.search(r"[가-힣]", w):
+            pats[w] = re.compile(r"(?<![A-Za-z])" + re.escape(w) + r"(?![A-Za-z])", re.I)
         else:
-            it["firstSeen"] = today.isoformat()
-        out.append(it)
+            pats[w] = re.compile(re.escape(w), re.I)
+    return pats
+
+
+_STRONG = _compile_kw(STRONG_KEYWORDS)
+_WEAK = _compile_kw(WEAK_KEYWORDS)
+_MASK = [re.compile(p) for p in MASK_PHRASES]
+
+
+def _mask(text):
+    for rx in _MASK:
+        text = rx.sub(" ", text)
+    return text
+
+
+def bio_classify(title="", host="", tags=None, body=""):
+    """
+    반환: (is_bio: bool, score: float, why: str)
+
+    통과 조건(모두 AND):
+      ① 오탐 문구를 지운 뒤에도 '강한 키워드'가 제목 또는 해시태그에 1개 이상 있다  AND
+      ② 가중 점수 합계 ≥ PASS_SCORE
+    예외(HOST_ASSIST): 주최기관에 강한 키워드(예: ○○제약) + 제목에 직무 단어(연구/품질/생산…) 가 함께 있으면 통과
+    약한 키워드(생명/건강/환경 …)만 있는 경우, 본문(body)에서만 발견된 경우는 통과하지 못합니다.
+    """
+    fields = {
+        "title": _mask(title or ""),
+        "tags": _mask(" ".join(tags or [])),
+        "host": _mask(host or ""),
+        "body": _mask(body or ""),
+    }
+    score, strong_hits, weak_hits = 0.0, {}, {}
+    for fname, text in fields.items():
+        if not text.strip():
+            continue
+        for kw, rx in _STRONG.items():
+            if rx.search(text):
+                strong_hits.setdefault(fname, []).append(kw)
+                score += WEIGHT_STRONG * FIELD_MULT[fname]
+        for kw, rx in _WEAK.items():
+            if rx.search(text):
+                weak_hits.setdefault(fname, []).append(kw)
+                score += WEIGHT_WEAK * FIELD_MULT[fname]
+
+    strong_in_core = bool(strong_hits.get("title") or strong_hits.get("tags"))
+    host_assist = bool(
+        strong_hits.get("host")
+        and any(w.lower() in fields["title"].lower() for w in HOST_ASSIST_TITLE_WORDS)
+    )
+    ok = (strong_in_core and score >= PASS_SCORE) or host_assist
+    why = ",".join(f"{f}:{'/'.join(k)}" for f, k in strong_hits.items()) or "-"
+    return ok, round(score, 1), why
+
+
+def infer_tags(title, tags, body=""):
+    text = f"{title} {' '.join(tags or [])} {body}"
+    out = []
+    for tag, words in TAG_RULES.items():
+        for w in words:
+            pat = (r"(?<![A-Za-z])" + re.escape(w) + r"(?![A-Za-z])") if re.fullmatch(r"[A-Za-z&]+", w) else re.escape(w)
+            if re.search(pat, text, re.I):
+                out.append(tag)
+                break
     return out
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--offline", action="store_true", help="크롤링 없이 병합만 수행")
-    args = ap.parse_args()
+# ═══════════════════════════════════════════════════════════════════════
+# [C. 정규화] — 사이트마다 제각각인 데이터를 '하나의 모양'으로
+# ═══════════════════════════════════════════════════════════════════════
+def clean(s):
+    s = unescape(re.sub(r"<[^>]+>", " ", s or ""))
+    return re.sub(r"\s+", " ", s).strip()
 
-    now = datetime.now(KST)
-    curated = load_json(CURATED, None)
-    if curated is None:
-        print("curated.json을 읽을 수 없습니다.", file=sys.stderr)
-        return 1
-    previous = load_json(OUTPUT, {})
 
-    log, scraped, status = [], [], {}
-    if not args.offline:
-        for name, fn in SCRAPERS.items():
-            try:
-                got = fn(log)
-                scraped += got
-                status[name] = {"ok": True, "count": len(got)}
-            except Exception as e:
-                status[name] = {"ok": False, "error": str(e)[:200]}
-                log.append(f"{name}: FAILED {e}")
+def to_iso(v):
+    """'2026.11.18' '2026-11-18' '26.11.18' 에폭(ms/s) '2026년 11월 18일' → 'YYYY-MM-DD' / 실패 시 None"""
+    if v is None or v == "":
+        return None
+    if isinstance(v, (int, float)) or (isinstance(v, str) and v.strip().isdigit() and len(v.strip()) >= 10):
+        n = float(v)
+        n = n / 1000 if n > 1e11 else n
+        try:
+            return datetime.fromtimestamp(n, KST).date().isoformat()
+        except Exception:
+            return None
+    s = str(v)
+    m = re.search(r"(\d{4})\s*[.\-/년]\s*(\d{1,2})\s*[.\-/월]\s*(\d{1,2})", s)
+    if not m:
+        m = re.search(r"\b(\d{2})\s*[.\-/]\s*(\d{1,2})\s*[.\-/]\s*(\d{1,2})\b", s)
+        if m:
+            y = 2000 + int(m.group(1))
+            return _safe_date(y, int(m.group(2)), int(m.group(3)))
+        return None
+    return _safe_date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
 
-    items = merge(curated, scraped, previous, now.date())
-    out = {
-        "meta": {
-            "updatedAt": now.isoformat(timespec="minutes"),
-            "itemCount": len(items),
-            "sources": status or {"offline": {"ok": True, "count": 0}},
-        },
-        "items": items,
-        "certs": curated.get("certs", []),
-        "schedules": curated.get("schedules", {}),
+
+def _safe_date(y, mo, d):
+    try:
+        return date(y, mo, d).isoformat()
+    except ValueError:
+        return None
+
+
+def make_id(source, url, native_id=None):
+    key = native_id or hashlib.sha1(url.encode()).hexdigest()[:10]
+    return f"{source}-{key}"
+
+
+def guess_cat(title, kind_hint):
+    """kind_hint: contest | activity | recruit  →  공모전|대외활동|채용|교육"""
+    if re.search(r"채용|인턴|신입|경력|모집공고|공채", title) and kind_hint != "contest":
+        return "채용"
+    if re.search(r"아카데미|교육|부트캠프|캠프|강좌|과정|연수|스쿨", title) and kind_hint != "contest":
+        return "교육"
+    return {"contest": "공모전", "activity": "대외활동", "recruit": "채용"}.get(kind_hint, "대외활동")
+
+
+def classify_trust(host, source_curated=False):
+    if source_curated:
+        return "verified"
+    h = (host or "").strip()
+    if h and (TRUSTED_HOST.search(h) or LOCAL_GOV.search(h)):
+        return "verified"
+    return "caution"
+
+
+def normalize(raw, source, base_url, kind_hint):
+    """
+    raw: 어떤 사이트에서 왔든 {title, host, start, end, url, tags, body, native_id} 정도의 느슨한 dict
+    반환: 프론트가 쓰는 표준 공고 객체 / 쓸 수 없으면 None
+    """
+    title = clean(raw.get("title"))
+    url = urllib.parse.urljoin(base_url, (raw.get("url") or "").strip())
+    if not title or len(title) < 4:
+        return None
+    if urllib.parse.urlparse(url).scheme not in ("http", "https"):
+        return None
+    if EXCLUDE_TITLE.search(title):
+        return None
+    end = to_iso(raw.get("end"))
+    start = to_iso(raw.get("start"))
+    if not end:                        # 마감일을 모르는 공고는 신뢰할 수 없어 제외
+        return None
+    if start and start > end:
+        start = None
+    host = clean(raw.get("host"))[:40]
+    tags = [clean(t).lstrip("#") for t in (raw.get("tags") or []) if clean(t)]
+    body = clean(raw.get("body"))[:300]
+
+    is_bio, score, why = bio_classify(title, host, tags, body)
+    cat = guess_cat(title, kind_hint)
+    item = {
+        "id": make_id(source, url, raw.get("native_id")),
+        "cat": cat,
+        "kind": "apply",
+        "isBio": is_bio,
+        "essential": False,
+        "always": False,
+        "title": title,
+        "host": host or "주최 정보 없음",
+        "start": start or end,
+        "end": end,
+        "url": url,
+        "trust": classify_trust(host),
+        "grades": list(GRADES_ALL),
+        "tags": infer_tags(title, tags, body) if is_bio else [],
+        "note": f"{SOURCE_LABEL.get(source, source)} 공고 원문",
+        "source": source,
+        "bioScore": score,       # 디버깅용: 점수/근거 (프론트는 무시)
+        "bioWhy": why,
     }
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return item
 
-    for line in log:
-        print(line)
-    print(f"wrote {OUTPUT.relative_to(ROOT)}: {len(items)} items")
-    return 0
+
+# ═══════════════════════════════════════════════════════════════════════
+# [D. 수집] — 공통 HTTP + 사이트별 어댑터
+# ═══════════════════════════════════════════════════════════════════════
+_robots = {}
+
+
+def allowed(url):
+    p = urllib.parse.urlparse(url)
+    base = f"{p.scheme}://{p.netloc}"
+    if base not in _robots:
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            req = urllib.request.Request(base + "/robots.txt", headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                rp.parse(r.read().decode("utf-8", "ignore").splitlines())
+        except Exception:
+            rp = None            # robots를 못 읽으면(404 등) 허용으로 간주하되, 목록 1페이지만 보수적으로 사용
+        _robots[base] = rp
+    rp = _robots[base]
+    return True if rp is None else rp.can_fetch(UA, url)
+
+
+def fetch(url, retries=1):
+    if not allowed(url):
+        raise PermissionError(f"robots.txt 가 접근을 허용하지 않음: {url}")
+    last = None
+    for i in range(retries + 1):
+        try:
+            time.sleep(REQUEST_DELAY)
+            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "ko-KR,ko;q=0.9"})
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                raw = r.read()
+                enc = r.headers.get_content_charset() or "utf-8"
+            try:
+                return raw.decode(enc, "ignore")
+            except LookupError:
+                return raw.decode("utf-8", "ignore")
+        except Exception as e:      # 네트워크/차단/타임아웃 모두 여기서 처리
+            last = e
+    raise last
+
+
+# ---- 상세페이지 범용 파서: JSON-LD → __NEXT_DATA__ → 본문 라벨(정규식) 순서로 시도 ----
+RANGE = re.compile(
+    r"(\d{4}\s*[.\-/]\s*\d{1,2}\s*[.\-/]\s*\d{1,2}|\d{2}\s*[.\-/]\s*\d{1,2}\s*[.\-/]\s*\d{1,2})"
+    r"[^0-9~∼\-–]{0,12}[~∼\-–]\s*"
+    r"(\d{4}\s*[.\-/]\s*\d{1,2}\s*[.\-/]\s*\d{1,2}|\d{2}\s*[.\-/]\s*\d{1,2}\s*[.\-/]\s*\d{1,2})"
+)
+LABEL_END = re.compile(r"(?:마감일?|접수\s*마감|모집\s*마감|종료일?)\s*[:：]?\s*(\d{4}\s*[.\-/]\s*\d{1,2}\s*[.\-/]\s*\d{1,2})")
+LABEL_HOST = re.compile(r"(?:주최\s*/?\s*주관|주최|주관|기관명|기업명|회사명|호스트)\s*[:：]?\s*([^\n|<>]{2,30})")
+KEY_TITLE = ("title", "name", "subject", "activityTitle", "contestTitle")
+KEY_START = ("recruitStartAt", "startDate", "startAt", "applyStartDate", "beginDate", "start")
+KEY_END = ("recruitCloseAt", "endDate", "endAt", "closeDate", "deadline", "applyEndDate", "dueDate", "end")
+KEY_HOST = ("organizationName", "organization", "host", "company", "companyName", "hostName", "organizer", "sponsor")
+
+
+def _walk(o):
+    if isinstance(o, dict):
+        yield o
+        for v in o.values():
+            yield from _walk(v)
+    elif isinstance(o, list):
+        for v in o:
+            yield from _walk(v)
+
+
+def _pick(d, keys):
+    for k in keys:
+        v = d.get(k)
+        if v not in (None, "", [], {}):
+            if isinstance(v, dict):
+                v = v.get("name") or v.get("title")
+            if v not in (None, ""):
+                return v
+    return None
+
+
+def _from_json_blobs(html):
+    blobs = []
+    for m in re.finditer(r'<script[^>]+type="application/(?:ld\+)?json"[^>]*>(.*?)</script>', html, re.S | re.I):
+        blobs.append(m.group(1))
+    m = re.search(r'<script[^>]+id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    if m:
+        blobs.append(m.group(1))
+    for b in blobs:
+        try:
+            data = json.loads(b)
+        except Exception:
+            continue
+        for d in _walk(data):
+            t, e = _pick(d, KEY_TITLE), _pick(d, KEY_END)
+            if t and e and to_iso(e):
+                return {"title": t, "start": _pick(d, KEY_START), "end": e, "host": _pick(d, KEY_HOST)}
+    return None
+
+
+def parse_detail(html):
+    """어떤 사이트의 상세페이지든 {title,start,end,host,body,tags} 를 최대한 뽑는다. 못 뽑으면 빈 dict."""
+    out = {}
+    j = _from_json_blobs(html)
+    if j:
+        out.update({k: v for k, v in j.items() if v})
+    text = clean(re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", html, flags=re.S | re.I))
+    if not out.get("end"):
+        m = RANGE.search(text)
+        if m:
+            out["start"], out["end"] = m.group(1), m.group(2)
+        else:
+            m = LABEL_END.search(text)
+            if m:
+                out["end"] = m.group(1)
+    if not out.get("title"):
+        m = re.search(r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"', html) or re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S) \
+            or re.search(r"<title[^>]*>(.*?)</title>", html, re.S)
+        if m:
+            out["title"] = re.split(r"\s[|\-–]\s", clean(m.group(1)))[0]
+    if not out.get("host"):
+        m = LABEL_HOST.search(re.sub(r"<[^>]+>", "\n", html)) or LABEL_HOST.search(text)
+        if m:
+            out["host"] = clean(m.group(1))
+    m = re.search(r'<meta[^>]+(?:property="og:description"|name="description")[^>]+content="([^"]*)"', html)
+    out["body"] = clean(m.group(1)) if m else ""
+    out["tags"] = re.findall(r"#([가-힣A-Za-z0-9_]{2,15})", text)[:10]
+    return out
+
+
+# ---- 사이트별 설정: 목록 URL + 상세링크 정규식 + 종류 힌트. (사이트가 바뀌면 여기만 고치면 됩니다) ----
+SOURCES = {
+    "linkareer": {
+        "label": "링커리어",
+        "base": "https://linkareer.com",
+        "lists": [("https://linkareer.com/list/contest", "contest"), ("https://linkareer.com/list/activity", "activity")],
+        "link": re.compile(r'href="(/activity/\d+)"'),
+    },
+    "thinkyou": {
+        "label": "씽유",
+        "base": "https://www.thinkyou.co.kr",
+        "lists": [("https://www.thinkyou.co.kr/contest/", "contest")],
+        "link": re.compile(r'href="((?:https://www\.thinkyou\.co\.kr)?/contest/\d+/?[^"#]*)"'),
+    },
+    "campuspick": {
+        "label": "캠퍼스픽",
+        "base": "https://www.campuspick.com",
+        "lists": [("https://www.campuspick.com/contest", "contest"), ("https://www.campuspick.com/activity", "activity")],
+        "link": re.compile(r'href="(/(?:contest|activity)/view\?id=\d+)"'),
+    },
+    "wevity": {
+        "label": "위비티",
+        "base": "https://www.wevity.com",
+        "lists": [("https://www.wevity.com/?c=find&s=1&gub=1&cidx=20", "contest"),   # 과학/공학
+                  ("https://www.wevity.com/?c=find&s=1&gub=1", "contest")],           # 전체(최신)
+        "link": re.compile(r'href="(\?c=find[^"]*?gbn=view[^"]*?ix=\d+[^"]*)"'),
+    },
+}
+SOURCE_LABEL = {k: v["label"] for k, v in SOURCES.items()}
+
+
+def scrape_source(name, spec, log):
+    """한 사이트를 수집해 '원시 dict 리스트' 반환. 개별 공고 실패는 건너뛰고, 사이트 전체 실패는 예외로 올린다."""
+    results, seen = [], set()
+    list_errors = 0
+    for list_url, kind in spec["lists"]:
+        try:
+            html = fetch(list_url)
+        except Exception as e:
+            list_errors += 1
+            log(f"  [{name}] 목록 실패 {list_url}: {type(e).__name__}: {e}")
+            continue
+        links = []
+        for m in spec["link"].finditer(html):
+            href = unescape(m.group(1))
+            if href not in seen:
+                seen.add(href)
+                links.append(href)
+        log(f"  [{name}] {kind} 링크 {len(links)}개 발견")
+        for href in links[:MAX_LIST_LINKS]:
+            if len(results) >= MAX_DETAIL_PAGES:
+                break
+            url = urllib.parse.urljoin(spec["base"] + "/", href)
+            try:
+                d = parse_detail(fetch(url))
+                if d.get("title") and d.get("end"):
+                    d.update({"url": url, "kind": kind})
+                    results.append(d)
+            except Exception as e:          # 공고 1개 실패는 무시
+                log(f"  [{name}] 상세 건너뜀 {url}: {type(e).__name__}")
+    if list_errors == len(spec["lists"]):
+        raise RuntimeError("모든 목록 페이지 접근 실패(차단/구조변경/네트워크)")
+    return results
+
+
+def run_sources(previous_items, log):
+    """모든 사이트를 '서로 격리해서' 실행. 한 사이트 실패 → 지난 데이터 유지(CARRY_OVER_DAYS) 후 계속."""
+    items, report = [], {}
+    for name, spec in SOURCES.items():
+        try:
+            raws = scrape_source(name, spec, log)
+            normed = []
+            for r in raws:
+                try:
+                    it = normalize(r, name, spec["base"], r.get("kind", "contest"))
+                    if it:
+                        normed.append(it)
+                except Exception as e:      # 정규화 오류 1건이 전체를 막지 않도록
+                    log(f"  [{name}] 정규화 건너뜀: {type(e).__name__}: {e}")
+            if not normed:
+                raise RuntimeError("파싱된 공고 0건(구조 변경 의심)")
+            items += normed
+            report[name] = {"status": "ok", "count": len(normed), "bio": sum(i["isBio"] for i in normed)}
+            log(f"{name}: {len(normed)} items parsed (생명/보건 {report[name]['bio']})")
+        except Exception as e:
+            carried = [p for p in previous_items if p.get("source") == name and _within(p.get("end"), CARRY_OVER_DAYS)]
+            items += carried
+            report[name] = {"status": "failed", "error": f"{type(e).__name__}: {e}"[:120], "carriedOver": len(carried)}
+            log(f"{name}: FAILED → 지난 데이터 {len(carried)}건 유지 ({e})")
+    return items, report
+
+
+def _within(end_iso, days):
+    try:
+        return date.fromisoformat(end_iso) >= TODAY - timedelta(days=days)
+    except Exception:
+        return False
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# [E. 병합] curated > 크롤링, 제목 중복 제거, NEW(firstSeen) 기록, 마감 정리
+# ═══════════════════════════════════════════════════════════════════════
+def norm_title(t):
+    return re.sub(r"[^0-9a-z가-힣]", "", (t or "").lower())
+
+
+def dedupe_by_title(items):
+    """같은 공고가 여러 사이트에 올라온 경우 1개만 남김. 우선순위: curated > 공신력 > 먼저 들어온 것"""
+    def rank(it):
+        return (0 if it.get("source") in (None, "curated") else 1, 0 if it.get("trust") == "verified" else 1)
+
+    best = {}
+    for it in items:
+        key = norm_title(it.get("title"))
+        if not key:
+            continue
+        if key not in best or rank(it) < rank(best[key]):
+            best[key] = it
+    return list(best.values())
+
+
+def stamp_first_seen(items, previous_items):
+    prev = {p["id"]: p.get("firstSeen") for p in previous_items if p.get("id") and p.get("firstSeen")}
+    for it in items:
+        it["firstSeen"] = prev.get(it["id"]) or it.get("firstSeen") or TODAY.isoformat()
+    return items
+
+
+def prune_closed(items):
+    keep = []
+    for it in items:
+        if it.get("source") in (None, "curated") or it.get("always"):
+            keep.append(it)
+        elif _within(it.get("end"), KEEP_CLOSED_DAYS):
+            keep.append(it)
+    return keep
+
+
+def merge(curated_items, crawled_items, previous_items):
+    for c in curated_items:
+        c.setdefault("source", "curated")
+    merged = dedupe_by_title(list(curated_items) + list(crawled_items))
+    merged = prune_closed(merged)
+    return stamp_first_seen(merged, previous_items)
+
+
+# ═══════════════════════════════════════════════════════════════════════
+def main():
+    logs = []
+
+    def log(msg):
+        print(msg, flush=True)
+        logs.append(msg)
+
+    if not CURATED.exists():
+        sys.exit("curated.json 이 없습니다.")
+    curated = json.loads(CURATED.read_text(encoding="utf-8"))
+    curated_items = curated.get("items", []) if isinstance(curated, dict) else curated
+
+    previous_items = []
+    if OUTPUT.exists():
+        try:
+            prev = json.loads(OUTPUT.read_text(encoding="utf-8"))
+            previous_items = prev.get("items", []) if isinstance(prev, dict) else []
+        except Exception:
+            pass
+
+    crawled, report = run_sources(previous_items, log)
+    items = merge(curated_items, crawled, previous_items)
+
+    out = dict(curated) if isinstance(curated, dict) else {}
+    out["items"] = items
+    out["updatedAt"] = datetime.now(KST).isoformat(timespec="seconds")
+    out["sources"] = report
+    OUTPUT.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    log(f"저장 완료: 총 {len(items)}건 (curated {len(curated_items)} + crawled {len(items) - len(curated_items)}±)")
+    # 모든 사이트가 실패해도 curated 데이터로 사이트는 정상 동작하므로 종료 코드는 0 유지
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
