@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAt": "2026-11-17T10:42+09:00",
-    "itemCount": 337,
+    "updatedAt": "2026-11-18T09:41+09:00",
+    "itemCount": 349,
     "sources": {
       "thinkyou": {
         "ok": true,
@@ -9,7 +9,7 @@
       },
       "linkareer": {
         "ok": true,
-        "count": 58
+        "count": 60
       }
     }
   },
@@ -8082,6 +8082,296 @@
       "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
       "source": "linkareer",
       "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "lk-363928",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[SK행복나눔재단] Sunny Scholar 6기",
+      "host": "SK행복나눔재단",
+      "start": "2026-11-16",
+      "end": "2026-12-06",
+      "url": "https://linkareer.com/activity/363928",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365281",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[영등포종합사회복지관] 장난감도서관 정리 자원봉사자 모집",
+      "host": "초록우산 영등포종합사회복지관",
+      "start": "2026-11-18",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/365281",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365215",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "제5기 27 동계 제주 봉사 프로그램",
+      "host": "미래희망복지회, 늘푸른사회적협동조합",
+      "start": "2026-11-17",
+      "end": "2027-02-15",
+      "url": "https://linkareer.com/activity/365215",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365198",
+      "cat": "대외활동",
+      "kind": "apply",
+      "isBio": false,
+      "title": "국내 대기업 현직자가 들려주는 AI/머신러닝 엔지니어의 실제 업무부터 취업 준비까지! IT직무프리뷰 모집(~12/2)",
+      "host": "오픈놀",
+      "start": "2026-11-17",
+      "end": "2026-12-02",
+      "url": "https://linkareer.com/activity/365198",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-362183",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[한국체육산업개발(주)] 공공데이터 활용 경진대회",
+      "host": "한국체육산업개발(주)",
+      "start": "2026-11-04",
+      "end": "2026-12-01",
+      "url": "https://linkareer.com/activity/362183",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365200",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2027 지역 창업 솔버톤 대회 참가자 모집 (~11/28)",
+      "host": "주식회사 유디임팩트",
+      "start": "2026-11-16",
+      "end": "2026-11-28",
+      "url": "https://linkareer.com/activity/365200",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "venture"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365185",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[Liner Scholar] 3주 리서치 챌린지",
+      "host": "라이너",
+      "start": "2026-11-17",
+      "end": "2026-11-22",
+      "url": "https://linkareer.com/activity/365185",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365135",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[부산정보산업진흥원] 2026 뮤직텔링 부산 공모전",
+      "host": "부산정보산업진흥원",
+      "start": "2026-11-09",
+      "end": "2026-11-23",
+      "url": "https://linkareer.com/activity/365135",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365134",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[한국해양수산연수원] 2026 국가자격시험 전국민 우수문항 공모전",
+      "host": "한국해양수산연수원",
+      "start": "2026-11-17",
+      "end": "2026-11-20",
+      "url": "https://linkareer.com/activity/365134",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365130",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "2027 제 2회 Superb AI X BDAI Vision AI 해커톤",
+      "host": "비디에이아이(BDAI)",
+      "start": "2026-11-16",
+      "end": "2027-01-10",
+      "url": "https://linkareer.com/activity/365130",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365114",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "AI 역사 콘텐츠 공모전",
+      "host": "이오고대사연구소",
+      "start": "2026-11-04",
+      "end": "2027-01-10",
+      "url": "https://linkareer.com/activity/365114",
+      "trust": "caution",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "rnd",
+        "ai",
+        "sales"
+      ],
+      "note": "링커리어 공고 원문 · 주최 규모를 확인하세요",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lk-365109",
+      "cat": "공모전",
+      "kind": "apply",
+      "isBio": false,
+      "title": "[해양경찰청] 2026 CAPTED 연안안전  아이디어 공모전",
+      "host": "해양경찰청",
+      "start": "2026-11-16",
+      "end": "2026-12-13",
+      "url": "https://linkareer.com/activity/365109",
+      "trust": "verified",
+      "grades": [
+        "1학년",
+        "2학년",
+        "3학년",
+        "4학년",
+        "휴학생"
+      ],
+      "tags": [
+        "gmp"
+      ],
+      "note": "링커리어 공고 원문",
+      "source": "linkareer",
+      "firstSeen": "2026-11-18"
     }
   ],
   "certs": [
